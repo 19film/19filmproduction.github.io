@@ -53,27 +53,27 @@
         }
 
         .image-box:nth-child(1)::before {
-            background-image: url('./images/sp1.png'); /* Background image for the first box */
+            background-image: url('./sp1.png'); /* Background image for the first box */
         }
 
         .image-box:nth-child(2)::before {
-            background-image: url('./images/sp2.jpg'); /* Background image for the second box */
+            background-image: url('./sp2.jpg'); /* Background image for the second box */
         }
 
         .image-box:nth-child(3)::before {
-            background-image: url('./images/sp3.jpg'); /* Background image for the third box */
+            background-image: url('./sp3.jpg'); /* Background image for the third box */
         }
 
         .image-box:nth-child(4)::before {
-            background-image: url('./images/sp4.jpg'); /* Background image for the fourth box */
+            background-image: url('./sp4.jpg'); /* Background image for the fourth box */
         }
 
         .image-box:nth-child(5)::before {
-            background-image: url('./images/sp5.jpg'); /* Background image for the fifth box */
+            background-image: url('./sp5.jpg'); /* Background image for the fifth box */
         }
 
         .image-box:nth-child(6)::before {
-            background-image: url('./images/sp6.png'); /* Background image for the sixth box */
+            background-image: url('./sp6.png'); /* Background image for the sixth box */
         }
 
         .image-box:hover::before {
