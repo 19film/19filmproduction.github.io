@@ -110,7 +110,7 @@ h5 {
 }
 
 .container {
-    background: url(./19.jpg);
+    background: url(19.jpg);
     padding: 4% 10%; /* Responsive padding */
     margin: 5% 0;
     margin-top: 4px;
@@ -143,15 +143,15 @@ li:hover {
 
 /* Define different images for each list item */
 li:nth-child(1) {
-    --image: url('./im1.jpg');
+    --image: url('im1.jpg');
 }
 
 li:nth-child(2) {
-    --image: url('./im5.jpg');
+    --image: url('im5.jpg');
 }
 
 li:nth-child(3) {
-    --image: url('./19.jpg');
+    --image: url('19.jpg');
 }
 
 
@@ -202,27 +202,27 @@ li:nth-child(3) {
         }
 
         .image-box:nth-child(1)::before {
-            background-image: url('./sp1.png'); /* Background image for the first box */
+            background-image: url('sp1.png'); /* Background image for the first box */
         }
 
         .image-box:nth-child(2)::before {
-            background-image: url('./sp2.jpg'); /* Background image for the second box */
+            background-image: url('sp2.jpg'); /* Background image for the second box */
         }
 
         .image-box:nth-child(3)::before {
-            background-image: url('./sp3.jpg'); /* Background image for the third box */
+            background-image: url('sp3.jpg'); /* Background image for the third box */
         }
 
         .image-box:nth-child(4)::before {
-            background-image: url('./sp4.jpg'); /* Background image for the fourth box */
+            background-image: url('sp4.jpg'); /* Background image for the fourth box */
         }
 
         .image-box:nth-child(5)::before {
-            background-image: url('./sp5.jpg'); /* Background image for the fifth box */
+            background-image: url('sp5.jpg'); /* Background image for the fifth box */
         }
 
         .image-box:nth-child(6)::before {
-            background-image: url('./sp6.png'); /* Background image for the sixth box */
+            background-image: url('sp6.png'); /* Background image for the sixth box */
         }
 
         .image-box:hover::before {
