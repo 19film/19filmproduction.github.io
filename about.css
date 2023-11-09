@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: 1001;
+    align-items: center;
+    background: white;
+    gap:1rem;
+    margin-top: 2rem;
+}
+.home-text {
+    flex:1 1 17rem;
+}
+.home-img {
+    flex:1 1 12rem;
+}
+.home-img img {
+    animation: animate 3s linear infinite; 
+}
+h4 {
+    text-align: center;
+    font-size: 3vw;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    font-weight: bold; /* Responsive font size */
+}
+h6 {
+    text-align: center;
+    font-size: 3vw; 
+    margin-top: 4rem;
+    margin-bottom: 1rem; /* Responsive font size */
+}
+footer {
+    background-color: #333;
+    color:black;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    flex: 1;
+}
+
+.footer-logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.footer-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    margin: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-social {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-social a {
+    margin: 10px;
+    text-decoration: none;
+    color: #fff;
+}

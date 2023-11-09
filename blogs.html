@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image with Text</title>
+ 
+    <link rel="stylesheet" href="blogs.css">
+    <style>
+        .scroll-animated {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .scroll-animated.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <style>
+        .ko {
+            margin: 0;
+            padding: 0;
+            background-image: url('./images/bo.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff; /* Text color */
+            text-align: center;
+        }
+        .ko header {
+    background-color: transparent; /* Add your background color */
+    /* Add other styles for the header within .ko */
+}
+        h1 {
+            font-size: 36px; /* Adjust the font size as needed */
+            margin-bottom: 10px;
+            margin-top: 4rem;
+            
+        }
+        
+        p {
+            font-size: 18px; /* Adjust the font size as needed */
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px; /* Adjust the font size for smaller screens */
+            }
+            p {
+                font-size: 14px; /* Adjust the font size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="./images/lo.png"></a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blogs.html" class="nav-link">Blogs</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span> 
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <div class="ko">
+        <header>
+    <h1>Your Text Goes Here (Above)</h1>
+    <p>Additional text or content can be added here (Below).</p>
+</header>
+</div>
+<div class="tit scroll-animated">
+    <h5>BLOGS</h5>
+</div>
+<div class="lola scroll-animated">
+    <div class="shadow-box scroll-animated">
+        <div class="image" style="background-image: url('./images/19.jpg');"></div>
+        <div class="text">
+            <p>For instance, in some styles of writing, particularly journalistic styles.</p>
+        </div>
+    </div>
+    <div class="shadow-box scroll-animated">
+        <div class="image" style="background-image: url('./images/im2.jpg');"></div>
+        <div class="text">
+            <p>For instance, in some styles of writing, particularly journalistic styles.</p>
+        </div>
+    </div>
+    <div class="shadow-box scroll-animated">
+        <div class="image" style="background-image: url('./images/im1.jpg');"></div>
+        <div class="text">
+            <p>For instance, in some styles of writing, particularly journalistic styles.</p>
+        </div>
+    </div>
+    <style>
+        h5 {
+    text-align: center;
+    font-size: 3vw; 
+    margin-top: 2rem;/* Responsive font size */
+}
+        .lola {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 60px;
+            margin-bottom: 50px;
+        }
+        
+        .shadow-box {
+            width: 350px; /* Increased width */
+            height: 350px; /* Increased height */
+            background: #fff;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform 0.3s, background-color 0.3s;
+            margin: 5px; /* Decreased margin */
+        }
+        
+        .lola .shadow-box:hover {
+            transform: translateY(-10px); /* Move up slightly on hover */
+            background-color: grey; /* Change background color on hover */
+        }
+        
+        .image {
+            flex: 1;
+            background-image: url('image1.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .text {
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .text p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</div>
+<footer class="scroll-animated">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="./images/logo.png" alt="Logo">
+        </div>
+        <div class="footer-links">
+            <a href="mailto:info@example.com" class="scroll-animated">mail: info@example.com</a>
+            <a href="tel:+1234567890" class="scroll-animated">phone: +1234567890</a>
+        </div>
+        <div class="footer-social scroll-animated">
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+        </div>
+    </div>
+</footer>
+<script src="main.js"></script>
+    <script src="script.js"></script>
+    <script>
+        const scrollElements = document.querySelectorAll(".scroll-animated");
+
+        function checkScroll() {
+            scrollElements.forEach((element) => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < window.innerHeight - 20) {
+                    element.classList.add("animate");
+                } else {
+                    element.classList.remove("animate");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", checkScroll);
+        window.addEventListener("load", checkScroll);
+    </script>
+    <script>
+        // JavaScript to display details when hovering over a list item
+        const listItems = document.querySelectorAll('.list-item');
+        const detailsContainer = document.querySelector('.details');
+    
+        listItems.forEach((item) => {
+          item.addEventListener('mouseover', () => {
+            detailsContainer.textContent = item.getAttribute('data-info');
+          });
+    
+          item.addEventListener('mouseout', () => {
+            detailsContainer.textContent = '';
+          });
+        });
+      </script>
+        <script>
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+    
+    
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            })
+            document.querySelectorAll(".nav-link").forEach(n=> n.
+            addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            }))
+            </script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+
+header{
+    background-color: transparent;
+}
+li{
+    list-style: none;
+}
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+.navbar{
+    min-height:70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.logo
+{
+    position: relative;
+    margin-top: 10px;
+}
+
+/* Add this CSS rule to set the size of the logo image */
+.logo-img {
+    width: 20px; /* Adjust the width to make the logo smaller */
+    height: 20px; /* This maintains the aspect ratio */
+}
+.nav-link{
+    transition:0.7s ease;
+
+}
+.nav-link:hover{
+    color: yellow;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+    
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+
+}
+@media(max-width:768px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+     opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translate(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translate(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position:fixed ;
+        left: -130%;
+        top:120px;
+        gap:0;
+        flex-direction: column;
+        background-color:white;
+        width: 100%;
+        text-align:center;
+        transition: 0.3s;
+        z-index: 1000;
+
+    }
+    .nav-item{
+        margin: 16px 0;
+       
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+}

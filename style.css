@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+
+.home {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to a new line when the screen is too narrow */
+    align-items: center;
+    background: white;
+    padding: 20px;
+}
+
+/* Styles for the text container */
+.home-text {
+    flex: 1; /* Take up all available horizontal space */
+    padding: 10px;
+}
+
+/* Styles for the image container */
+.home-img {
+    flex: 1; /* Take up all available horizontal space */
+    padding: 10px;
+    text-align: center; /* Center the image horizontally */
+}
+
+/* Make the image responsive and smaller */
+.home-img img {
+    animation: animate 3s linear infinite; 
+}
+@keyframes animate{
+    0% {
+        transform: translate(-11px, 0);
+    }
+    50% {
+        transform: translate(-0px, -10px);
+    }
+    100% {
+        transform: translate(-11px, 0);
+    }
+}
+
+/* Style the text elements */
+.home-text span {
+    font-size: 1.5rem; /* Set a relative font size */
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--second-color);
+    margin: 0.5em 0; /* Use em units for margin */
+}
+
+.home-text h1 {
+    font-size: 3.2rem;
+    color: rgba(255, 255, 0, 0.678);
+    font-weight: bolder;
+   
+    
+
+
+   
+     /* Use em units for margin */
+}
+
+.home-text h2 {
+    font-size: 1.8rem;
+    font-weight: 600; 
+    color: black;
+    text-transform: uppercase;
+    margin: 0.2em 0 1.3em;
+    
+   /* Use em units for margin */
+}
+
+.btn {
+    font-size: 1.5rem; /* Set a relative font size */
+    padding: 0.5em 1em; /* Use em units for padding */
+    border: 2px solid yellow;
+    border-radius: 1.5em; /* Use em units for border-radius */
+    color: rgb(131, 131, 9);
+    font-weight: 500;
+}
+
+.btn:hover {
+    color: white;
+    background: var(--second-color);
+}
+.btn{
+    padding: 7px 16px;
+    border: 2px solid yellow;
+    border-radius: 40px;
+    color: rgb(131, 131, 9);
+    font-weight: 500;
+}
+.btn:hover {
+    color: white;
+    background: var(--second-color);
+}
+
+
+h5 {
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 2rem;
+    margin-top: 4em;
+    font-weight: bold; /* Responsive font size */
+}
+
+.container {
+    background: url(./images/19.jpg);
+    padding: 4% 10%; /* Responsive padding */
+    margin: 5% 0;
+    margin-top: 4px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    border-radius: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 1% 0; /* Responsive margins */
+    color: white;
+    cursor: pointer;
+    font-size: 3vw; /* Responsive font size */
+    transition: transform 0.2s;
+}
+
+li:hover {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+/* Define different images for each list item */
+li:nth-child(1) {
+    --image: url('./images/im1.jpg');
+}
+
+li:nth-child(2) {
+    --image: url('./images/im5.jpg');
+}
+
+li:nth-child(3) {
+    --image: url('./images/19.jpg');
+}
+
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 20px; /* Add gap between grid items */
+    padding: 10px; /* Add padding to create black space around the grid */
+}
+.image-box {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 10px; /* Add margin to create space around each image */
+}
+
+
+        .image-grid img {
+            max-width: 100%;
+            max-height: 100%;
+            margin-top: 30px;
+        }
+
+        .image-box:hover {
+            background-color: white;
+        }
+
+        .image-box::before {
+            content: "";
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            filter: grayscale(100%);
+            transition: filter 0.3s, transform 0.3s;
+            transform: scale(1);
+        }
+
+        .image-box:nth-child(1)::before {
+            background-image: url('./images/sp1.png'); /* Background image for the first box */
+        }
+
+        .image-box:nth-child(2)::before {
+            background-image: url('./images/sp2.jpg'); /* Background image for the second box */
+        }
+
+        .image-box:nth-child(3)::before {
+            background-image: url('./images/sp3.jpg'); /* Background image for the third box */
+        }
+
+        .image-box:nth-child(4)::before {
+            background-image: url('./images/sp4.jpg'); /* Background image for the fourth box */
+        }
+
+        .image-box:nth-child(5)::before {
+            background-image: url('./images/sp5.jpg'); /* Background image for the fifth box */
+        }
+
+        .image-box:nth-child(6)::before {
+            background-image: url('./images/sp6.png'); /* Background image for the sixth box */
+        }
+
+        .image-box:hover::before {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        .image-text {
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: color 0.3s;
+        }
+
+        .image-box:hover .image-text {
+            color: #000;
+        }
+
+        .lola {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 60px;
+            margin-bottom: 50px;
+        }
+        
+        .shadow-box {
+            width: 350px; /* Increased width */
+            height: 350px; /* Increased height */
+            background: #fff;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform 0.3s, background-color 0.3s;
+            margin: 5px; /* Decreased margin */
+        }
+        
+        .lola .shadow-box:hover {
+            transform: translateY(-10px); /* Move up slightly on hover */
+            background-color: grey; /* Change background color on hover */
+        }
+        
+        .image {
+            flex: 1;
+            background-image: url('image1.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .text {
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .text p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+           
+        footer {
+            background-color: #333;
+            color:black;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 100px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-logo {
+            flex: 1;
+        }
+        
+        .footer-logo img {
+            max-width: 100px;
+            height: auto;
+        }
+        
+        .footer-links {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            margin: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        .footer-social {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .footer-social a {
+            margin: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+         
+
+@media(max-width:1150px ){
+    header{
+        padding: 18px 7%;
+    }
+    section {
+        padding: 50px 7%;
+    }
+    .home-text h1 {
+        font-size: 3rem;
+    }
+    .home-text h2 {
+        font-size: 1.5rem;
+    }
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        grid-template-rows: repeat(2, 1fr); /* 2 rows */
+        gap: 10px; /* Reduce the gap between grid items */
+        padding: 10px; /* Increase padding for smaller screens */
+    }
+
+    .image-box {
+        width: calc(33.33% - 20px); /* Adjust the box width for 3 columns with margin */
+        height: 200px; 
+        width: 200px;/* Increase the height for larger boxes */
+        margin: 10px; /* Add margin to create space around each image */
+    }
+
+    .image-text {
+        font-size: 18px; /* Reduce font size for smaller screens */
+    }
+    .shadow-box {
+        width: 100%;
+        
+       /* Use full width for small screens */
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
+@media(max-width:991px ){
+    header{
+        padding: 18px 4%;
+    }
+    section {
+        padding: 50px 4%;
+    }
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        grid-template-rows: repeat(2, 1fr); /* 2 rows */
+        gap: 10px; /* Reduce the gap between grid items */
+        padding: 10px; /* Increase padding for smaller screens */
+    }
+
+    .image-box {
+        width: calc(33.33% - 20px); /* Adjust the box width for 3 columns with margin */
+        height: 250px; 
+        width: 250px;/* Increase the height for larger boxes */
+        margin: 10px; /* Add margin to create space around each image */
+    }
+
+    .image-text {
+        font-size: 18px; /* Reduce font size for smaller screens */
+    }
+    .shadow-box {
+        width: 100%;
+        
+       /* Use full width for small screens */
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+@media (max-width: 768px) {
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+     opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translate(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translate(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top:100px;
+        gap:0;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        text-align:center;
+        transition: 0.3s;
+
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+
+    .navbar.active {
+        top: 100%;
+    }
+
+    .navbar a {
+        padding: 1.5rem;
+        display: block;
+        color: var(--second-color);
+    }
+
+    .home-text,
+    .home-img {
+        flex: 1; /* Full width for text and image containers */
+    }
+    
+    .home-img img {
+        max-height: 150px; /* Adjust maximum image height for smaller screens */
+    }
+
+    /* Adjust font sizes and margins for smaller screens */
+    .home-text span,
+    .home-text h1,
+    .home-text h2,
+    .btn {
+        font-size: 1rem; /* Reduce font size for smaller screens */
+    }
+    
+    .home-text h1 {
+        margin: 0.2em 0 0.5em; /* Adjust margin for smaller screens */
+    }
+
+    .home-text h2 {
+        margin: 0.2em 0 0.5em; /* Adjust margin for smaller screens */
+        margin-left: 0.2em; /* Adjust margin for smaller screens */
+    }
+
+
+
+
+
+    .konta {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .list {
+        width: 100%;
+      }
+
+      .list-item {
+        margin-top: 1rem;
+      }
+
+      .details {
+        width: 100%;
+        margin-top: 1rem;
+        max-height: none;
+      }
+
+.image-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 10px; /* Reduce the gap between grid items */
+    padding: 10px; /* Increase padding for smaller screens */
+}
+
+.image-box {
+    width: calc(33.33% - 20px); /* Adjust the box width for 3 columns with margin */
+    height: 100px; 
+    width: 100px;/* Increase the height for larger boxes */
+    margin: 10px; /* Add margin to create space around each image */
+}
+
+.image-text {
+    font-size: 18px; /* Reduce font size for smaller screens */
+}
+.shadow-box {
+    width: 100%;
+    
+   /* Use full width for small screens */
+}
+.footer-content {
+    flex-direction: column;
+    align-items: center;
+}
+}
+@media (max-width: 280px){
+    header {
+        padding: 5px 4%;
+    }
+
+    #menu-icon {
+        display: initial;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: -300px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 4px 4px rgba(14, 55, 54, 0.14);
+        border-top: 2px solid var(--main-color);
+        transition: 0.2s;
+        text-align: left;
+    }
+
+    .navbar.active {
+        top: 100%;
+    }
+
+    .navbar a {
+        padding: 1.5rem;
+        display: block;
+        color: var(--second-color);
+    }
+
+    .home-text span {
+        font-size: 0.9rem;
+    }
+
+    .home-text h1 {
+        margin-top: 5px;
+        font-size: 2.4rem;
+    }
+
+    .home-text h2 {
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+    .home-img {
+        order: 2; /* Change the order to move the image down */
+        margin-top: 5px; /* Add some top margin for spacing */
+    }
+    .shadow-box {
+        width: 100%;
+        
+       /* Use full width for small screens */
+    }
+
+.image-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 10px; /* Reduce the gap between grid items */
+    padding: 10px; /* Increase padding for smaller screens */
+}
+
+.image-box {
+    width: calc(33.33% - 20px); /* Adjust the box width for 3 columns with margin */
+    height: 100px; 
+    width: 100px;/* Increase the height for larger boxes */
+    margin: 10px; /* Add margin to create space around each image */
+}
+
+.image-text {
+    font-size: 18px; /* Reduce font size for smaller screens */
+
+}
+.footer-content {
+    flex-direction: column;
+    align-items: center;
+}
+}

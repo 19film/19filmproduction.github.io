@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Webpage</title>
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="macha.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+  <style>
+    .scroll-animated {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .scroll-animated.animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+<!--navbar-->
+<header>
+<nav class="navbar">
+    <a href="#" class="logo"><img src="./images/lo.png"></a>
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+        </li>
+        <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+            <a href="blogs.html" class="nav-link">Blogs</a>
+        </li>
+    </ul>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+</header>
+<div class="tit scroll-animated">
+  <h4>Who We Are</h4>
+</div>
+  <p>A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost What is a paragraph and example?
+    countable noun. A paragraph is a section of a piece of writing. A paragraph always begins on a new line and contains at least one sentence. The length of a paragraph depends on the information it conveys. Paragraph 81 sets out the rules that should apply if a gift is accepted every piece of writing you do that is longer than a few sentences should be organized into paragraphs. This is a basic example of an HTML and CSS webpage. You can customize the content and styles to create your own web pages.</p>
+  <h6>OUR TEAM</h6>
+  <p>A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost What is a paragraph and example?
+    countable noun. A paragraph is a section of a piece of writing. A paragraph always begins on a new line and contains at least one sentence. The length of a paragraph depends on the information it conveys. Paragraph 81 sets out the rules that should apply if a gift is accepted every piece of writing you do that is longer than a few sentences should be organized into paragraphs. This is a basic example of an HTML and CSS webpage. You can customize the content and styles to create your own web pages.</p>
+    <style>
+      .image-container {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        margin: 30px; /* Add space around each image container */
+      }
+  
+      .image-container img {
+        width: 200px; /* Adjust the width as needed */
+        height: 200px; /* Adjust the height as needed */
+        transition: transform 0.3s;
+      }
+  
+      .image-container img:hover {
+        transform: scale(1.1); /* Increase the image size on hover */
+      }
+  
+      .image-text {
+        font-size: 16px;
+        color: #333;
+        margin-top: 10px; /* Add space between the image and text */
+      }
+  
+      /* Arrange images in a 2-row, 3-column grid */
+      .image-row {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-row">
+      <div class="image-container">
+        <img src="./images/im1.jpg" alt="Image 1" onmouseover="changeImage(this)" onmouseout="restoreImage(this)">
+        <h1 class="image-text">Image 1</h1>
+        <h1 class="image-text">Image polo</h1>
+      </div>
+      <div class="image-container">
+        <img src="./images/im2.jpg" alt="Image 2" onmouseover="changeImage(this)" onmouseout="restoreImage(this)">
+        <h1 class="image-text">Image 2</h1>
+        <h1 class="image-text">Image polo</h1>
+      </div>
+      <div class="image-container">
+        <img src="./images/dg.png" alt="Image 3" onmouseover="changeImage(this)" onmouseout="restoreImage(this)">
+        <h1 class="image-text">Image 3</h1>
+        <h1 class="image-text">Image polo</h1>
+      </div>
+    </div>
+    <div class="image-row">
+      <div class="image-container">
+        <img src="./images/im4.jpg" alt="Image 4" onmouseover="changeImage(this)" onmouseout="restoreImage(this)">
+        <h1 class="image-text">Image 4</h1>
+        <h1 class="image-text">Image polo</h1>
+      </div>
+      <div class="image-container">
+        <img src="./images/im5.jpg" alt="Image 5" onmouseover="changeImage(this)" onmouseout="restoreImage(this)">
+        <h1 class="image-text">Image 5</h1>
+        <h1 class="image-text">Image polo</h1>
+      </div>
+      <div class="image-container">
+        <img src="./images/19.jpg" alt="Image 6" onmouseover="changeImage(this)" onmouseout="restoreImage(this)">
+        <h1 class="image-text">Image 6</h1>
+        <h1 class="image-text">Image polo</h1>
+      </div>
+    </div>
+    <footer class="scroll-animated">
+      <div class="footer-content">
+          <div class="footer-logo">
+              <img src="./images/logo.png" alt="Logo">
+          </div>
+          <div class="footer-links">
+              <a href="mailto:info@example.com" class="scroll-animated">mail: info@example.com</a>
+              <a href="tel:+1234567890" class="scroll-animated">phone: +1234567890</a>
+          </div>
+          <div class="footer-social scroll-animated">
+              <a href="#" class="fab fa-facebook"></a>
+              <a href="#" class="fab fa-twitter"></a>
+              <a href="#" class="fab fa-instagram"></a>
+              <a href="#" class="fab fa-linkedin"></a>
+          </div>
+      </div>
+  </footer>
+  
+  
+  
+  
+  
+      <!--link to custom js-->
+      <script src="main.js"></script>
+      <script src="script.js"></script>
+      <script>
+          // JavaScript to display details when hovering over a list item
+          const listItems = document.querySelectorAll('.list-item');
+          const detailsContainer = document.querySelector('.details');
+      
+          listItems.forEach((item) => {
+            item.addEventListener('mouseover', () => {
+              detailsContainer.textContent = item.getAttribute('data-info');
+            });
+      
+            item.addEventListener('mouseout', () => {
+              detailsContainer.textContent = '';
+            });
+          });
+        </script>
+         
+    <script>
+      function changeImage(img) {
+        img.src = "./images/19.jpg";
+      }
+  
+      function restoreImage(img) {
+        img.src = "./images/im1.jpg";
+      }
+    </script>
+       <script>
+           const scrollElements = document.querySelectorAll(".scroll-animated");
+   
+           function checkScroll() {
+               scrollElements.forEach((element) => {
+                   const elementTop = element.getBoundingClientRect().top;
+                   if (elementTop < window.innerHeight - 20) {
+                       element.classList.add("animate");
+                   } else {
+                       element.classList.remove("animate");
+                   }
+               });
+           }
+   
+           window.addEventListener("scroll", checkScroll);
+           window.addEventListener("load", checkScroll);
+       </script>
+      
+           <script>
+               const hamburger = document.querySelector(".hamburger");
+               const navMenu = document.querySelector(".nav-menu");
+       
+       
+               hamburger.addEventListener("click", () => {
+                   hamburger.classList.toggle("active");
+                   navMenu.classList.toggle("active");
+               })
+               document.querySelectorAll(".nav-link").forEach(n=> n.
+               addEventListener("click", () => {
+                   hamburger.classList.remove("active");
+                   navMenu.classList.remove("active");
+               }))
+               </script>
+           
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="macha.css">
+    <link rel="stylesheet" href="portfoli.css">
+</head>
+<body>
+
+    <style>
+        .scroll-animated {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .scroll-animated.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="./images/lo.png"></a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blogs.html" class="nav-link">Blogs</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <!--our work-->
+    <div class="tit scroll-animated">
+        <h5>OUR WORK</h5>
+    </div>
+    <h1>WE HAVE WORKED WITH SOME OF THE BEST</h1>
+    <div class="main-gallery">
+        <div class="inner-gallery">
+            <img src="./images/19.jpg" alt="">
+            <img src="./images/im1.jpg" alt="">
+        </div>
+        <div class="inner-gallery">
+            <div class="girl">
+                <img src="./images/im2.jpg" alt="">
+            </div>
+            
+        </div>
+        <div class="inner-gallery">
+            <img src="./images/im4.jpg" alt="">
+            <img src="./images/im5.jpg" alt="">
+        </div>
+    </div>
+    <style>
+        h1 {
+    text-align: center;
+    font-size: 2vw; 
+    font-weight: 100;
+    color: grey;
+    margin-bottom: 3rem;/* Responsive font size */
+}
+        .main-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+}
+.inner-gallery{
+    flex: 1 1 300px;
+}
+.inner-gallery img{
+    width: 100%;
+}
+    </style>
+ <!--OUR CLIENTS-->
+ <div class="tit scroll-animated">
+    <h5>OUR CLIENTS</h5>
+</div>
+<div class="image-grid">
+    <div class="image-box scroll-animated">
+        <img src="./images/your-image.jpg" alt="Image 1">
+        <p class="image-text"></p>
+    </div>
+    <div class="image-box scroll-animated">
+        <p class="image-text"></p>
+    </div>
+    <div class="image-box scroll-animated">
+        <p class="image-text"></p>
+    </div>
+    <div class="image-box scroll-animated">
+        <p class="image-text"></p>
+    </div>
+    <div class= "image-box scroll-animated">
+        <p class="image-text"></p>
+    </div>
+    <div class="image-box scroll-animated">
+        <p class="image-text"></p>
+    </div>
+</div>
+
+<footer class="scroll-animated">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="./images/logo.png" alt="Logo">
+        </div>
+        <div class="footer-links">
+            <a href="mailto:info@example.com" class="scroll-animated">mail: info@example.com</a>
+            <a href="tel:+1234567890" class="scroll-animated">phone: +1234567890</a>
+        </div>
+        <div class="footer-social scroll-animated">
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+        </div>
+    </div>
+</footer>
+
+
+<script src="main.js"></script>
+    <script src="script.js"></script>
+    <script>
+        const scrollElements = document.querySelectorAll(".scroll-animated");
+
+        function checkScroll() {
+            scrollElements.forEach((element) => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < window.innerHeight - 20) {
+                    element.classList.add("animate");
+                } else {
+                    element.classList.remove("animate");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", checkScroll);
+        window.addEventListener("load", checkScroll);
+    </script>
+    <script>
+        // JavaScript to display details when hovering over a list item
+        const listItems = document.querySelectorAll('.list-item');
+        const detailsContainer = document.querySelector('.details');
+    
+        listItems.forEach((item) => {
+          item.addEventListener('mouseover', () => {
+            detailsContainer.textContent = item.getAttribute('data-info');
+          });
+    
+          item.addEventListener('mouseout', () => {
+            detailsContainer.textContent = '';
+          });
+        });
+      </script>
+        <script>
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+    
+    
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            })
+            document.querySelectorAll(".nav-link").forEach(n=> n.
+            addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+                const toggleMenuButton = document.getElementById('toggle-menu');
+        const navMenu = document.querySelector('.nav-menu');
+
+        toggleMenuButton.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+            }))
+            </script>
+            
+</body>
+</html>
