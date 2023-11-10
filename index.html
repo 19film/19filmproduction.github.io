@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="macha.css">
     <link rel="stylesheet"
@@ -75,22 +75,24 @@
 </div>
 <!--services-->
 <div class="tit scroll-animated">
-    <h5>OUR SERVICES</h5>
+    <h6>OUR SERVICES</h6>
 </div>
 <style>
     /* Style for the container that holds the list and details */
     .konta {
       display: flex;
       justify-content: space-between;
-      background-image: url('./ba.avif'); /* Replace with your image URL */
+      background-image: url('baj.jpg'); /* Replace with your image URL */
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       height: 80vh;
       margin-bottom: 3rem;
       margin-top: 2.5rem;
+      box-shadow: 0px 0px 10px white;
+    
     }
-
+   
     /* Style for the left side list */
     .list {
       list-style: none;
@@ -108,22 +110,29 @@
       border: white;
       color: black;
       margin: 5px;
-      font-size: 2rem;
+      font-size: 2.3rem;
       transition: background-color 0.2s, transform 0.2s;
       margin-top: 1.5rem;
+      margin-left: 5em;
+      
     }
 
     .list-item:hover {
-      color: rgba(180, 180, 3, 0.815);
+      color: green;
       transform: scale(1.1); /* Zoom in effect */
     }
 
     /* Style for the right side details */
-    .details {
+    .list-item:first-child {
+  color:green;
+}
+
+ .details {
       width: 65%;
       padding: 20px;
       margin-top: 2rem;
       border: white;
+      font-size: 1em;
     }
    
   </style>
@@ -247,7 +256,7 @@
           });
     
           item.addEventListener('mouseout', () => {
-            detailsContainer.textContent = '';
+            detailsContainer.textContent = 'Quickly and easily add a white background to your images. Simply upload your image file to PhotoRoom, and select the white color you want in the background';
           });
         });
       </script>
