@@ -4,19 +4,23 @@
     padding:0;
     margin:0;
     box-sizing:border-box;
+    
 }
 
 
 .home {
     display: flex;
-    flex-wrap: wrap; /* Wrap items to a new line when the screen is too narrow */
+    flex-wrap: wrap;
     align-items: center;
-    background: white;
+    background-color: grey;
     padding: 20px;
+    border: 2px solid grey; /* Add a border with a color of #333 */
+    box-shadow: 0px 0px 10px grey; /* Box shadow remains as is */
 }
 
 /* Styles for the text container */
 .home-text {
+    margin-left: 8em;
     flex: 1; /* Take up all available horizontal space */
     padding: 10px;
 }
@@ -108,7 +112,13 @@ h5 {
     margin-top: 4em;
     font-weight: bold; /* Responsive font size */
 }
-
+h6 {
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 2.5rem;
+    margin-top: 4em;
+    font-weight: bold; /* Responsive font size */
+}
 .container {
     background: url(19.jpg);
     padding: 4% 10%; /* Responsive padding */
@@ -118,6 +128,7 @@ h5 {
     background-repeat: no-repeat;
     color: black;
     border-radius: 0;
+    height: 35em;
 }
 
 ul {
@@ -131,6 +142,8 @@ li {
     cursor: pointer;
     font-size: 3vw; /* Responsive font size */
     transition: transform 0.2s;
+    margin-left: 2.5em;
+    margin-top: 1.5em;
 }
 
 li:hover {
