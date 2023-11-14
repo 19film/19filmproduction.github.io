@@ -1,3 +1,16 @@
+let menu= document.querySelector("#menu-icon");
+let navbar = document.querySelector('.navbar');
+
+
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('active')
+}
+window.onscroll = () => {
+    menu.classList.remove('bx-x');
+    navbar.classList.remove('active')
+}
+
 function changeContent(title, background) {
     const banner = document.querySelector('.banner');
     const contents = banner.querySelectorAll('.content');
@@ -37,3 +50,14 @@ imageChangeElements.forEach((element) => {
     });
 });
 
+let menu=document.querySelector('#menu-icon');
+
+
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+}
+window.onscroll = () => {
+    menu.classList.remove('bx-x');
+    navbar.classList.tremove('active');
+}
