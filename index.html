@@ -3,153 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>19film</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="macha.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
 </head>
 <body>
-    <style>
-        .scroll-animated {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s, transform 0.5s;
-        }
-
-        .scroll-animated.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
- <!--navbar-->
- <header>
-    <nav class="navbar">
-        <a href="#" class="logo"><img src="./lo.png"></a>
-        <ul class="nav-menu">
-            <li class="nav-item">
-                <a href="#home" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="portfolio.html" class="nav-link">Portfolio</a>
-            </li>
-            <li class="nav-item">
-                <a href="about.html" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-                <a href="blogs.html" class="nav-link">Blogs</a>
-            </li>
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+     <!--Navbar-->
+     <header>
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="./lo.png"></a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <div class="home" id="home">
+        <div class="home-text">
+            <span>Welcome To</span>
+            <h1>19film production</h1>
+            <h2>free jkdsh ashjkshf  <br> shjshsf</h2>
+            <a href="#" class="btn">join now</a>
         </div>
-    </nav>
-</header>
-
-<!--home-->
-<div class="home" id="home">
-    <div class="home-text">
-        <span>Welcome To</span>
-        <h1>19film production</h1>
-        <h2>free jkdsh ashjkshf  <br> shjshsf</h2>
-        <a href="#" class="btn">join now</a>
+        <div class="home-img">
+            <img src="./dg.png" alt="">
+        </div>
     </div>
-    <div class="home-img">
-        <img src="./dg.png" alt="">
+     <!--link to custom js-->
+
+     <script>
+         const scrollElements = document.querySelectorAll(".scroll-animated");
+ 
+         function checkScroll() {
+             scrollElements.forEach((element) => {
+                 const elementTop = element.getBoundingClientRect().top;
+                 if (elementTop < window.innerHeight - 20) {
+                     element.classList.add("animate");
+                 } else {
+                     element.classList.remove("animate");
+                 }
+             });
+         }
+ 
+         window.addEventListener("scroll", checkScroll);
+         window.addEventListener("load", checkScroll);
+     </script>
+     <script>
+         // JavaScript to display details when hovering over a list item
+         const listItems = document.querySelectorAll('.list-item');
+         const detailsContainer = document.querySelector('.details');
+     
+         listItems.forEach((item) => {
+           item.addEventListener('mouseover', () => {
+             detailsContainer.textContent = item.getAttribute('data-info');
+           });
+     
+           item.addEventListener('mouseout', () => {
+             detailsContainer.textContent = 'Quickly and easily add a white background to your images. Simply upload your image file to PhotoRoom, and select the white color you want in the background';
+           });
+         });
+       </script>
+         <script>
+             const hamburger = document.querySelector(".hamburger");
+             const navMenu = document.querySelector(".nav-menu");
+     
+     
+             hamburger.addEventListener("click", () => {
+                 hamburger.classList.toggle("active");
+                 navMenu.classList.toggle("active");
+             })
+             document.querySelectorAll(".nav-link").forEach(n=> n.
+             addEventListener("click", () => {
+                 hamburger.classList.remove("active");
+                 navMenu.classList.remove("active");
+             }))
+             </script>
+<section class="shop" id="shop">
+    <div class="heading">
+        <span>passion is in our recipe</span>
+        <h1>Our Works</h1>
     </div>
-</div>
-<!--front-->
-<div class="tit scroll-animated">
-    <h5>OUR WORK</h5>
-</div>
-
-<div class="container scroll-animated">
-
-    <ul>
-        <li class="image-change" data-image="im2.jpg">List item 1</li>
-        <li class="image-change" data-image="im5.jpg">List item 2</li>
-        <li class="image-change" data-image="19.jpg">List item 3</li>
-    </ul>
-</div>
-<!--services-->
-<div class="tit scroll-animated">
-    <h6>OUR SERVICES</h6>
-</div>
-<style>
-    /* Style for the container that holds the list and details */
-    .konta {
-      display: flex;
-      justify-content: space-between;
-      background-image: url('bak.jpg'); /* Replace with your image URL */
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 80vh;
-      margin-bottom: 3rem;
-      margin-top: 2.5rem;
-      box-shadow: 0px 0px 10px white;
-    
-    }
-   
-    /* Style for the left side list */
-    .list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      width: 30%;
-      margin-top: 1rem;
-      
-    }
-
-    /* Style for list items */
-    .list-item {
-      cursor: pointer;
-      padding: 10px;
-      border: white;
-      color: black;
-      margin: 5px;
-      font-size: 2.3rem;
-      transition: background-color 0.2s, transform 0.2s;
-      margin-top: 1.5rem;
-      margin-left: 5em;
-      
-    }
-
-    .list-item:hover {
-      color: green;
-      transform: scale(1.1); /* Zoom in effect */
-    }
-
-    /* Style for the right side details */
-    .list-item:first-child {
-  color:green;
-}
-
- .details {
-      width: 65%;
-      padding: 20px;
-      margin-top: 2rem;
-      border: white;
-      font-size: 1em;
-    }
-   
-  </style>
-</head>
-<body>
-  <div class="konta">
-    <ul class="list">
-      <li class="list-item" data-info="bh1 What Is Marketing?  promote the buying or selling of a product or service. Marketing includes advertising, selling, and delivering products to consumers or other businesses. Some marketing is done by affiliates on behalf of a company. ">Marketing</li>
-      <li class="list-item" data-info="bh2 What Is Marketing?  promote the buying or selling of a product or service. Marketing includes advertising, selling, and delivering products to consumers or other businesses. Some marketing is done by affiliates on behalf of a company.">PR & Media</li>
-      <li class="list-item" data-info="bh3 What Is Marketing?  promote the buying or selling of a product or service. Marketing includes advertising, selling, and delivering products to consumers or other businesses. Some marketing is done by affiliates on behalf of a company.">Design</li>
-      <li class="list-item" data-info="bh4 What Is Marketing?  promote the buying or selling of a product or service. Marketing includes advertising, selling, and delivering products to consumers or other businesses. Some marketing is done by affiliates on behalf of a company.">Consumer insights</li>
-    </ul>
-    <div class="details">
-        What Is Marketing?   Marketing includes advertising, s on behalf of a company.
+  <div class="shop-container">
+    <div class="box">
+        <div class="box-img">
+            <img src="dg.png" alt="">
+        </div>
+        <div class="stars">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+        </div>
+        <h2>graduation</h2>
+        <span></span>
+        <a href="#" class="btn">Call Now</a>
+    </div>
+    <div class="box">
+        <div class="box-img">
+            <img src="dg.png" alt="">
+        </div>
+        <div class="stars">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+        </div>
+        <h2>wedding</h2>
+        <span></span>
+        <a href="#" class="btn">Call Now</a>
+    </div>
+    <div class="box">
+        <div class="box-img">
+            <img src="dg.png" alt="">
+        </div>
+        <div class="stars">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+        </div>
+        <h2>film</h2>
+        <span></span>
+        <a href="#" class="btn">Call Now</a>
+    </div>
+    <div class="box">
+        <div class="box-img">
+            <img src="dg.png" alt="">
+        </div>
+        <div class="stars">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+        </div>
+        <h2>documentary</h2>
+        <span></span>
+        <a href="#" class="btn">Call Now</a>
     </div>
   </div>
-<!--clients-->
+
+</section>
+<!--Delivery-->
+
+
+<section class="app" id="app">
+    <div class="heading">
+        <span>Tailored to your needs</span>
+        <h1>OUR SERVICES</h1>
+    </div>
+    <div class="container">
+        
+        <div class="app-text">
+            <h2>film</h2>
+            <p>compare Old English gyrela, gi(e)rela “item of dress, apparel” (presumably worn by the young in the late Old English period, and hence used as a metonym)</p>
+            <p>compare Old English gyrela, gi(e)rela “item of dress, apparel” (presumably worn by the young in the late Old English period, and hence used as a metonym)</p>
+            <a href="#" class="btn">See More</a>
+        </div>
+        <div class="app-img">
+            <img src="im1.jpg" alt="">
+        </div>
+    </div>
+</section>
+   
+
+
+<section class="about" id="about">
+    <div class="about-img">
+        <img src="im1.jpg" alt="">
+    </div>
+    
+    <div class="about-text">
+        <h2>wedding</h2>
+        <p>compare Old English gyrela, gi(e)rela “item of dress, apparel” (presumably worn by the young in the late Old English period, and hence used as a metonym)</p>
+        <p>compare Old English gyrela, gi(e)rela “item of dress, apparel” (presumably worn by the young in the late Old English period, and hence used as a metonym)</p>
+        <a href="#" class="btn">See More</a>
+    </div>
+</section>
+  
+
+
 <div class="tit scroll-animated">
     <h6>OUR CLIENTS</h6>
 </div>
@@ -174,19 +225,23 @@
         <p class="image-text"></p>
     </div>
 </div>
+
+
+
+
 <!--blogs-->
 <div class="tit scroll-animated">
     <h6>BLOGS</h6>
 </div>
 <div class="lola scroll-animated">
     <div class="shadow-box scroll-animated">
-        <div class="image" style="background-image: url('./19.jpg');"></div>
+        <div class="image" style="background-image: url('./im1.jpg');"></div>
         <div class="text">
             <p>For instance, in some styles of writing, particularly journalistic styles.</p>
         </div>
     </div>
     <div class="shadow-box scroll-animated">
-        <div class="image" style="background-image: url('./im2.jpg');"></div>
+        <div class="image" style="background-image: url('./im1.jpg');"></div>
         <div class="text">
             <p>For instance, in some styles of writing, particularly journalistic styles.</p>
         </div>
@@ -200,80 +255,23 @@
     
 </div>
 
-
-
-<!--footer-->
-<footer class="scroll-animated">
-    <div class="footer-content">
-        <div class="footer-logo">
-            <img src="logo.png" alt="Logo">
-        </div>
-        <div class="footer-links">
-            <a href="mailto:info@example.com" class="scroll-animated">mail: info@example.com</a>
-            <a href="tel:+1234567890" class="scroll-animated">phone: +1234567890</a>
-        </div>
-        <div class="footer-social scroll-animated">
-            <a href="#" class="fab fa-facebook"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-        </div>
+<section class="contact" id="contact">
+    <div class="social">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-youtube'></i></a> 
     </div>
-</footer>
-
-
-
-
-
-    <!--link to custom js-->
-    <script src="main.js"></script>
-    <script src="script.js"></script>
-    <script>
-        const scrollElements = document.querySelectorAll(".scroll-animated");
-
-        function checkScroll() {
-            scrollElements.forEach((element) => {
-                const elementTop = element.getBoundingClientRect().top;
-                if (elementTop < window.innerHeight - 20) {
-                    element.classList.add("animate");
-                } else {
-                    element.classList.remove("animate");
-                }
-            });
-        }
-
-        window.addEventListener("scroll", checkScroll);
-        window.addEventListener("load", checkScroll);
-    </script>
-    <script>
-        // JavaScript to display details when hovering over a list item
-        const listItems = document.querySelectorAll('.list-item');
-        const detailsContainer = document.querySelector('.details');
-    
-        listItems.forEach((item) => {
-          item.addEventListener('mouseover', () => {
-            detailsContainer.textContent = item.getAttribute('data-info');
-          });
-    
-          item.addEventListener('mouseout', () => {
-            detailsContainer.textContent = 'Quickly and easily add a white background to your images. Simply upload your image file to PhotoRoom, and select the white color you want in the background';
-          });
-        });
-      </script>
-        <script>
-            const hamburger = document.querySelector(".hamburger");
-            const navMenu = document.querySelector(".nav-menu");
-    
-    
-            hamburger.addEventListener("click", () => {
-                hamburger.classList.toggle("active");
-                navMenu.classList.toggle("active");
-            })
-            document.querySelectorAll(".nav-link").forEach(n=> n.
-            addEventListener("click", () => {
-                hamburger.classList.remove("active");
-                navMenu.classList.remove("active");
-            }))
-            </script>
+<div class="links">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Use</a>
+<a href="#">Our company</a>
+</div>
+<p>&#150; HilinaTesfaye All Right Reserved.</p>
+</section>
+     <!--link to custom js-->
+     
+     <script src="script.js"></script>
+     
 </body>
 </html>
