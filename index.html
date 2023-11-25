@@ -3,161 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>19film</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="macha.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
 </head>
 <body>
-   <!--header-->
-  <header>
-    <a href="#" class="logo">Et-Health</a>
-
-    <ul class="navlist">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="tina.html">About Us</a></li>
-        <li><a href="#shop">Our Projects</a></li>
-       
-    </ul>
-
-        <div class="bx bx-menu-alt-right" id="menu-icon"></div>
-    
-  </header>
-
-
-  <!--home-->
-  <section class="home" id="home">
-    <div class="home-text">
-        <h1>Wellcome to,<span>Et-health Alley </span></h1>
+     <!--Navbar-->
+     <header>
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="./lo.png"></a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blogs.html" class="nav-link">Blogs</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        </header>
+    <div class="home" id="home">
+        <div class="home-text">
+            <span>Welcome To</span>
+            <h1>19film production</h1>
+            <h2>free jkdsh ashjkshf  <br> shjshsf</h2>
+            <a href="#" class="btn">join now</a>
+        </div>
+        <div class="home-img">
+            <img src="./dg.png" alt="">
+        </div>
     </div>
+     <!--link to custom js-->
 
-    <div class="home-img">
-        <img src="oj.jpg">
+     <script>
+         const scrollElements = document.querySelectorAll(".scroll-animated");
+ 
+         function checkScroll() {
+             scrollElements.forEach((element) => {
+                 const elementTop = element.getBoundingClientRect().top;
+                 if (elementTop < window.innerHeight - 20) {
+                     element.classList.add("animate");
+                 } else {
+                     element.classList.remove("animate");
+                 }
+             });
+         }
+ 
+         window.addEventListener("scroll", checkScroll);
+         window.addEventListener("load", checkScroll);
+     </script>
+     <script>
+         // JavaScript to display details when hovering over a list item
+         const listItems = document.querySelectorAll('.list-item');
+         const detailsContainer = document.querySelector('.details');
+     
+         listItems.forEach((item) => {
+           item.addEventListener('mouseover', () => {
+             detailsContainer.textContent = item.getAttribute('data-info');
+           });
+     
+           item.addEventListener('mouseout', () => {
+             detailsContainer.textContent = 'Quickly and easily add a white background to your images. Simply upload your image file to PhotoRoom, and select the white color you want in the background';
+           });
+         });
+       </script>
+         <script>
+             const hamburger = document.querySelector(".hamburger");
+             const navMenu = document.querySelector(".nav-menu");
+     
+     
+             hamburger.addEventListener("click", () => {
+                 hamburger.classList.toggle("active");
+                 navMenu.classList.toggle("active");
+             })
+             document.querySelectorAll(".nav-link").forEach(n=> n.
+             addEventListener("click", () => {
+                 hamburger.classList.remove("active");
+                 navMenu.classList.remove("active");
+             }))
+             </script>
+<section class="shop" id="shop">
+    <div class="heading">
+        <span>passion is in our recipe</span>
+        <h1>Our Works</h1>
     </div>
-  </section>
+  <div class="shop-container">
+    <div class="box">
+        <div class="box-img">
+            <img src="dg.png" alt="">
+        </div>
+        <div class="stars">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+        </div>
+        <h2>graduation</h2>
+        <span></span>
+        <a href="#" class="btn">Call Now</a>
+    </div>
+    <div class="box">
+        <div class="box-img">
+            <img src="dg.png" alt="">
+        </div>
+        <div class="stars">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+        </div>
+        <h2>wedding</h2>
+        <span></span>
+        <a href="#" class="btn">Call Now</a>
+    </div>
+    <div class="box">
+        <div class="box-img">
+            <img src="dg.png" alt="">
+        </div>
+        <div class="stars">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+        </div>
+        <h2>film</h2>
+        <span></span>
+        <a href="#" class="btn">Call Now</a>
+    </div>
+    <div class="box">
+        <div class="box-img">
+            <img src="dg.png" alt="">
+        </div>
+        <div class="stars">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+        </div>
+        <h2>documentary</h2>
+        <span></span>
+        <a href="#" class="btn">Call Now</a>
+    </div>
+  </div>
+
+</section>
+<!--Delivery-->
 
 
-  <!--container-->
-  
+<section class="app" id="app">
+    <div class="heading">
+        <span>Tailored to your needs</span>
+        <h1>OUR SERVICES</h1>
+    </div>
+    <div class="container">
+        
+        <div class="app-text">
+            <h2>film</h2>
+            <p>compare Old English gyrela, gi(e)rela “item of dress, apparel” (presumably worn by the young in the late Old English period, and hence used as a metonym)</p>
+            <p>compare Old English gyrela, gi(e)rela “item of dress, apparel” (presumably worn by the young in the late Old English period, and hence used as a metonym)</p>
+            <a href="#" class="btn">See More</a>
+        </div>
+        <div class="app-img">
+            <img src="im1.jpg" alt="">
+        </div>
+    </div>
+</section>
+   
 
-<!--about us-->
+
 <section class="about" id="about">
     <div class="about-img">
-        <img src="oj.jpg">
+        <img src="im1.jpg" alt="">
     </div>
-
+    
     <div class="about-text">
-        <h2>About Us</h2>
-        <p>A paragraph paragraphs. organized and coherent, Almost every piece of writing should be organized into paragraphs.A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.</p>
-        <a href="#" class="btn">See More<i class='bx bxs-right-arrow'></i></a>
+        <h2>wedding</h2>
+        <p>compare Old English gyrela, gi(e)rela “item of dress, apparel” (presumably worn by the young in the late Old English period, and hence used as a metonym)</p>
+        <p>compare Old English gyrela, gi(e)rela “item of dress, apparel” (presumably worn by the young in the late Old English period, and hence used as a metonym)</p>
+        <a href="#" class="btn">See More</a>
     </div>
 </section>
- 
+  
 
 
-<!--our shop-->
-<section class="shop" id="shop">
-    <div class="middle-text">
-        <h4>check out</h4>
-        <h2>Our Projects</h2>
+<div class="tit scroll-animated">
+    <h6>OUR CLIENTS</h6>
+</div>
+<div class="image-grid">
+    <div class="image-box scroll-animated">
+        <img src="your-image.jpg" alt="Image 1">
+        <p class="image-text"></p>
     </div>
-    <div class="shop-content">
-        <div class="row">
-            <img src="flo.jpg">
-            <h3>Bluuuu</h3>
-            <p>jsadhjhads sdhkjdh sdhjad</p>
-            <div class="in-text">
-                <div class="price">
-                    <h6></h6>
-                </div>
-                <div class="s-btn">
-                   <a href="#">blaka</a> 
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <img src="flo.jpg">
-            <h3>Bluuuu</h3>
-            <p>jsadhjhads sdhkjdh sdhjad</p>
-            <div class="in-text">
-                <div class="price">
-                    <h6></h6>
-                </div>
-                <div class="s-btn">
-                   <a href="#">blaka</a> 
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <img src="flo.jpg">
-            <h3>Bluuuu</h3>
-            <p>jsadhjhads sdhkjdh sdhjad</p>
-            <div class="in-text">
-                <div class="price">
-                    <h6></h6>
-                </div>
-                <div class="s-btn">
-                   <a href="#">blaka</a> 
-                </div>
-            </div>
-        </div>
-
-       
+    <div class="image-box scroll-animated">
+        <p class="image-text"></p>
+    </div>
+    <div class="image-box scroll-animated">
+        <p class="image-text"></p>
+    </div>
+    <div class="image-box scroll-animated">
+        <p class="image-text"></p>
+    </div>
+    <div class= "image-box scroll-animated">
+        <p class="image-text"></p>
+    </div>
+    <div class="image-box scroll-animated">
+        <p class="image-text"></p>
+    </div>
+</div>
 
 
-        <div class="row-btn">
-            <a href="#" class="btn">All Projects<i class='bx bxs-right-arrow'></i></a>
-   
+
+
+<!--blogs-->
+<div class="tit scroll-animated">
+    <h6>BLOGS</h6>
+</div>
+<div class="lola scroll-animated">
+    <div class="shadow-box scroll-animated">
+        <div class="image" style="background-image: url('./im1.jpg');"></div>
+        <div class="text">
+            <p>For instance, in some styles of writing, particularly journalistic styles.</p>
         </div>
     </div>
+    <div class="shadow-box scroll-animated">
+        <div class="image" style="background-image: url('./im1.jpg');"></div>
+        <div class="text">
+            <p>For instance, in some styles of writing, particularly journalistic styles.</p>
+        </div>
+    </div>
+    <div class="shadow-box scroll-animated">
+        <div class="image" style="background-image: url('./im1.jpg');"></div>
+        <div class="text">
+            <p>For instance, in some styles of writing, particularly journalistic styles.</p>
+        </div>
+    </div>
+    
+</div>
 
-</section>
-
-
-
-<!--contact-->
 <section class="contact" id="contact">
-     <div class="contact-content">
-       
-        <div class="contact-text">
-            <h2>Contact Us</h2>
-            <p>jdjkdh kdkshd skdhskdfh fhkshf fskf</p>
-            <div class="social">
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-github'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-twitter'></i></a>
-               
-            </div>
-
-        </div>
-
-         <div class="details">
-            <div class="main-d">
-                <a href="#"><i class='bx bx-location-plus'></i>skjdsd ksh sd</a>
-            </div>
-
-            <div class="main-d">
-                <a href="#"><i class='bx bx-location-plus'></i>0123456</a>
-            </div>
-
-            <div class="main-d">
-                <a href="#"><i class='bx bx-location-plus'></i>Hilina Tesfaye</a>
-            </div>
-         </div>
-
-     </div>
-
+    <div class="social">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-youtube'></i></a> 
+    </div>
+<div class="links">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Use</a>
+<a href="#">Our company</a>
+</div>
+<p>&#150; HilinaTesfaye All Right Reserved.</p>
 </section>
-
-
-
-    <!--link to js-->
-    <script src="script.js"></script>
-
-
-
+     <!--link to custom js-->
+     
+     <script src="script.js"></script>
+     
 </body>
 </html>
