@@ -1,6 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family:"Agbalumo" ;
+}
+.heading{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
 
-
+}
+.heading h1{
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 25px;
+    position: relative;
+}
+.heading h1::after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+  
+}
+.heading p{
+    font-size: 18px;
+    color:#666 ;
+    margin-bottom: 35px;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+   
+}
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #ebdbc8;
+}
+.about-image{
+    flex:1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+.about-image img{
+    max-width:100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+.about-image:hover img{
+    transform: scale(1.2);
+}
+.about-content{
+    flex:1;
+}
+.about-content h2{
+   font-size: 23px;
+   margin-bottom: 15px;
+   color: #333; 
+}
+.about-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+}
+.about-content .read-more{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+.about-content .read-more:hover{
+    background-color: #3e8e41;
+}
 .home{
     width: 100%;
     min-height: 100vh;
@@ -11,6 +103,7 @@
     gap:1rem;
     margin-top: 2rem;
 }
+
 .home-text {
     flex:1 1 17rem;
 }
@@ -25,58 +118,77 @@ h4 {
     font-size: 3vw;
     margin-top: 4rem;
     margin-bottom: 2rem;
-    font-weight: bold; /* Responsive font size */
+    font-weight: bold; 
+    color: black;/* Responsive font size */
 }
 h6 {
     text-align: center;
     font-size: 3vw; 
     margin-top: 4rem;
-    margin-bottom: 1rem; /* Responsive font size */
+    margin-bottom: 1rem; 
+    color: black;/* Responsive font size */
 }
-footer {
-    background-color: #333;
-    color:black;
-    padding: 20px 0;
+.image-row h1{
+    color: black;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+}
+.social a{
+    font-size: 27px;
+    margin: 0.5rem;
+}
+.social a .bx{
+  padding: 5px;
+  color: #fff;
+  background: #000000;  
+  border-radius: 50%;
+}
+.social a .bx:hover{
+    background: var(--main-color);
+}
+.links{
+    margin:1rem 0 1rem;
+}
+.links a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--second-color);
+    padding: 1rem;
+}
+.links a:hover {
+    color: var(--main-color);
+}
+.contact p{
     text-align: center;
-    margin-top: 100px;
 }
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.footer-logo {
-    flex: 1;
-}
-
-.footer-logo img {
-    max-width: 100px;
-    height: auto;
-}
-
-.footer-links {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.footer-links a {
-    margin: 10px;
-    text-decoration: none;
-    color: #fff;
-}
-
-.footer-social {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.footer-social a {
-    margin: 10px;
-    text-decoration: none;
-    color: #fff;
+@media screen and(max-width:768px) {
+    .heading{
+        padding: 0px 20px;
+    }
+    .heading h1{
+        font-size: 36px;
+    }
+    .heading p{
+        font-size:17px ;
+        margin-bottom: 0px;
+    }
+    .container{
+        padding: 0px;
+    }
+    .about{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .about-image{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .about-content p{
+        padding: 0px;
+        font-size: 16px;
+    }
 }
