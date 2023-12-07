@@ -464,6 +464,31 @@ h6 {
 .home-texth2 {
     font-size: 1.2rem;
 }
+.lola {
+    flex-direction: column; /* Stack items vertically on small screens */
+    margin-top: 4vw; /* Adjusted margin for small screens */
+    margin-bottom: 4vw;
+    margin-left: 4rem;/* Adjusted margin for small screens */
+}
+
+.shadow-box {
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Auto height on small screens */
+    margin: 2vw 0; /* Adjusted margin for small screens */
+}
+
+.text {
+    padding: 4vw; /* Adjusted padding for small screens */
+}
+
+.text p {
+    font-size: 4vw; /* Adjusted font size for small screens */
+}
+.image {
+    height: 50vh; /* Adjusted height for smaller screens */
+    min-height: 150px; /* Set a minimum height to ensure visibility */
+}
+
 }
 
 @media (max-width: 364px){
