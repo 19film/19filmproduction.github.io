@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>19film</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="macha.css">
+    
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -50,7 +50,634 @@
                 <span class="bar"></span>
             </div>
         </nav>
-        </header>
+    </header>
+
+
+    <style>
+ header{
+    background-color: white;
+  
+}
+li{
+    list-style: none;
+    margin-bottom: 1em;
+}
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+.navbar{
+    min-height:70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.logo
+{
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+}
+
+/* Add this CSS rule to set the size of the logo image */
+.logo-img {
+    width: 20px; /* Adjust the width to make the logo smaller */
+    height: auto; /* This maintains the aspect ratio */
+}
+.nav-link{
+    transition:0.7s ease;
+
+}
+.nav-link:hover{
+    color: yellow;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+    
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        margin-top: 50px;
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        z-index: 1500; /* Adjusted z-index */
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        z-index: 1500; /* Make sure the z-index is the same when active */
+    }
+
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 30px;
+        right: 24px;
+        z-index: 1001;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translate(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translate(-8px) rotate(-45deg);
+    }
+    .home-text span {
+        font-size: 0.8rem; /* Adjust the font size for smaller screens */
+    }
+
+    .home-text h1 {
+        font-size: 2rem; /* Adjust the font size for smaller screens */
+    }
+
+    .home-text h2 {
+        font-size: 1rem; /* Adjust the font size for smaller screens */
+    }
+    .shop h1 {
+        font-size: 2rem; /* Adjust the font size for smaller screens */
+    }
+
+    .box h2 {
+        font-size: 1rem; /* Adjust the font size for smaller screens */
+    }
+    .konta {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .list {
+        width: 100%; /* Adjust the width for smaller screens */
+        margin-top: 1rem;
+    }
+
+    .details {
+        width: 100%; /* Adjust the width for smaller screens */
+        margin-top: 1rem;
+    }
+}
+/* ... Your existing styles ... */
+
+/* Additional styles for screens up to 600px */
+@media (max-width: 600px) {
+    .logo-img {
+        width: 15px; /* Adjust the width for smaller screens */
+    }
+
+    .hamburger {
+        /* Customize styles for smaller screens */
+        top: 30px;
+        right: 30px;
+    }
+
+    .nav-menu {
+        margin-top: 50px;
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        z-index: 1500; /* Adjusted z-index */
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        z-index: 1500; /* Make sure the z-index is the same when active */
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translate(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translate(-8px) rotate(-45deg);
+    }
+
+    .home-text span {
+        font-size: 0.8rem;
+    }
+
+    .home-text h1 {
+        font-size: 2rem;
+    }
+
+    .home-text h2 {
+        font-size: 1rem;
+    }
+}
+
+/* Additional styles for screens up to 480px */
+@media (max-width: 480px) {
+    .logo-img {
+        width: 12px; /* Adjust the width for smaller screens */
+    }
+
+    .hamburger {
+        /* Customize styles for smaller screens */
+        top: 30px;
+        right: 20px;
+    }
+
+    .nav-menu {
+        margin-top: 50px;
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        z-index: 1500; /* Adjusted z-index */
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        z-index: 1500; /* Make sure the z-index is the same when active */
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translate(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translate(-8px) rotate(-45deg);
+    }
+
+    .home-text span {
+        font-size: 0.7rem;
+    }
+
+    .home-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-text h2 {
+        font-size: 0.9rem;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-item {
+        height: 120px;
+    }
+
+    .shadow-box {
+        max-width: 90%;
+    }
+
+    .text {
+        padding: 8px;
+        font-size: 11px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .logo-img {
+        width: 15px; /* Adjust the width for smaller screens */
+    }
+
+    .hamburger {
+        /* Customize styles for smaller screens */
+        top: 30px;
+        right: 30px;
+
+    }
+    .nav-menu {
+        display: none;
+        margin-top: 50px;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        z-index: 1500; /* Adjusted z-index */
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        z-index: 1500; /* Make sure the z-index is the same when active */
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translate(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translate(-8px) rotate(-45deg);
+    }
+    /* Add any additional styles for smaller screens here */
+}
+/* Additional styles for screens up to 400px */
+@media (max-width: 400px) {
+    .logo-img {
+        width: 10px; /* Adjust the width for smaller screens */
+    }
+
+    .hamburger {
+        /* Customize styles for smaller screens */
+        top: 20px;
+        right: 15px;
+    }
+
+    .nav-menu {
+        margin-top: 50px;
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        z-index: 1500; /* Adjusted z-index */
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        z-index: 1500; /* Make sure the z-index is the same when active */
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translate(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translate(-8px) rotate(-45deg);
+    }
+
+    .home-text span {
+        font-size: 0.6rem;
+    }
+
+    .home-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .home-text h2 {
+        font-size: 0.8rem;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-item {
+        height: 100px;
+    }
+
+    .shadow-box {
+        max-width: 80%;
+    }
+
+    .text {
+        padding: 6px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    /* Custom styles for screens up to 320px */
+    .logo-img {
+        width: 15px; /* Adjust the width for smaller screens */
+    }
+
+    .hamburger {
+        /* Customize styles for smaller screens */
+        top: 30px;
+        right: 30px;
+
+    }
+
+    .nav-menu {
+        display: none;
+        margin-top: 50px;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        z-index: 1500; /* Adjusted z-index */
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        z-index: 1500; /* Make sure the z-index is the same when active */
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translate(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translate(-8px) rotate(-45deg);
+    }
+    .home-text span {
+        font-size: 0.6rem;
+    }
+
+    .home-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .home-text h2 {
+        font-size: 0.8rem;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-item {
+        height: 100px;
+    }
+
+    .shadow-box {
+        max-width: 80%;
+    }
+
+    .text {
+        padding: 6px;
+        font-size: 10px;
+    }
+    /* Add any additional styles for smaller screens here */
+}
+@media (max-width: 576px) {
+    .logo-img {
+        width: 15px; /* Adjust the width for smaller screens */
+    }
+
+    .hamburger {
+        /* Customize styles for smaller screens */
+        top: 30px;
+        right: 30px;
+
+    }
+    .nav-menu {
+        margin-top: 50px;
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        z-index: 1500; /* Adjusted z-index */
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        z-index: 1500; /* Make sure the z-index is the same when active */
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translate(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translate(-8px) rotate(-45deg);
+    }
+    /* Add any additional styles for smaller screens here */
+}
+@media (max-width: 414px) {
+    /* Custom styles for screens up to 414px */
+    .logo-img {
+        width: 15px; /* Adjust the width for smaller screens */
+    }
+
+    .hamburger {
+        /* Customize styles for smaller screens */
+        top: 30px;
+        right: 30px;
+
+    }
+    .nav-menu {
+        margin-top: 50px;
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        z-index: 1500; /* Adjusted z-index */
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        z-index: 1500; /* Make sure the z-index is the same when active */
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translate(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translate(-8px) rotate(-45deg);
+    }
+    /* Add any additional styles for smaller screens here */
+}
+
+/* Additional styles for screens up to 375px */
+@media (max-width: 375px) {
+    /* Custom styles for screens up to 375px */
+    .logo-img {
+        width: 15px; /* Adjust the width for smaller screens */
+    }
+
+    .hamburger {
+        /* Customize styles for smaller screens */
+        top: 30px;
+        right: 30px;
+
+    }
+    .nav-menu {
+        margin-top: 50px;
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        z-index: 1500; /* Adjusted z-index */
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        z-index: 1500; /* Make sure the z-index is the same when active */
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translate(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translate(-8px) rotate(-45deg);
+    }
+    /* Add any additional styles for smaller screens here */
+}
+
+/* Additional styles for screens up to 320px */
+@media (max-width: 320px) {
+    /* Custom styles for screens up to 320px */
+    .logo-img {
+        width: 15px; /* Adjust the width for smaller screens */
+    }
+
+    .hamburger {
+        /* Customize styles for smaller screens */
+        top: 30px;
+        right: 30px;
+
+    }
+    .nav-menu {
+        margin-top: 50px;
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        z-index: 1500; /* Adjusted z-index */
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        z-index: 1500; /* Make sure the z-index is the same when active */
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translate(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translate(-8px) rotate(-45deg);
+    }
+    /* Add any additional styles for smaller screens here */
+}
+        </style>
+
+
+
+
     <div class="home" id="home">
         <div class="home-text scroll-animated">
             <span>Welcome To</span>
@@ -82,24 +709,10 @@
          window.addEventListener("load", checkScroll);
      </script>
     
-         <script>
-             const hamburger = document.querySelector(".hamburger");
-             const navMenu = document.querySelector(".nav-menu");
-     
-     
-             hamburger.addEventListener("click", () => {
-                 hamburger.classList.toggle("active");
-                 navMenu.classList.toggle("active");
-             })
-             document.querySelectorAll(".nav-link").forEach(n=> n.
-             addEventListener("click", () => {
-                 hamburger.classList.remove("active");
-                 navMenu.classList.remove("active");
-             }))
-             </script>
+        
 <section class="shop" id="shop">
     <div class="heading">
-        <span>passion is in our recipe</span>
+        <span></span>
         <h1>Our Works</h1>
     </div>
   <div class="shop-container">
@@ -190,34 +803,11 @@
     }
 }
 @media (max-width: 768px) {
-    .header {
-        padding: 11px 4%;
-        color: white;
-    }
+   
    #menu-icon {
     display: initial;
    }
-   header .navbar{
-    position: absolute;
-    top: -500px;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    background: green;
-    box-shadow: 0 4px 4px rgb( 14 55 54 / 14%);
-    border-top: 2px solid var(--main-color);
-    transition: 0.2s;
-    text-align: left;
-   }
-   .navbar .active{
-    top: 100%;
-   }
-   .navbar a{
-    padding:1.5rem ;
-    display: block;
-    color: var(--second-color);
-}
+  
 .home-text span {
     font-size: 0.9rem;
 }
@@ -232,8 +822,9 @@
 <!--Delivery-->
 
 
-<div class="tit scroll-animated">
-    <h6>OUR SERVICES</h6>
+<div class="heading">
+    <span></span>
+    <h1>Our Services</h1>
 </div>
 <style>
     /* Style for the container that holds the list and details */
@@ -293,19 +884,7 @@
    #menu-icon {
     display: initial;
    }
-   header .navbar{
-    position: absolute;
-    top: -500px;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    box-shadow: 0 4px 4px rgb( 14 55 54 / 14%);
-    border-top: 2px solid var(--main-color);
-    transition: 0.2s;
-    text-align: left;
-   }
+  
     .konta {
         flex-direction: column;
         height: auto;
@@ -350,74 +929,276 @@
 </style>
 <div class="konta">
     <ul class="list">
-        <li class="list-item" data-info="bh1 What Is Marketing?  promote the buying or selling of a product or service. Marketing includes advertising, selling, and delivering products to consumers or other businesses. Some marketing is done by affiliates on behalf of a company.">Marketing</li>
-        <li class="list-item" data-info="bh2 What Is Marketing?  promote the buying or selling of a product or service. Marketing includes advertising, selling, and delivering products to consumers or other businesses. Some marketing is done by affiliates on behalf of a company.">PR & Media</li>
-        <li class="list-item" data-info="bh3 What Is Marketing?  promote the buying or selling of a product or service. Marketing includes advertising, selling, and delivering products to consumers or other businesses. Some marketing is done by affiliates on behalf of a company.">Design</li>
+        <li class="list-item" data-info="Discover something new with our TV and radio ads! Imagine a lively TV commercial showing our cool wireless earbuds fixing annoying cord issues. On the radio, we share stories about people, just like you, finding solutions to everyday problems with our awesome product. Ready for a change? Visit our website or call now for a special deal. Our ads aren't just about watching or listening – they're about making your life better. Try it out and experience something amazing with our TV and radio commercials because you deserve it!">Production</li>
+        <li class="list-item" data-info="We are your go-to film production team, acting as dynamic agents for advertising and trusted consultants. With a passion for storytelling, we bring brands to life through captivating visuals and compelling narratives. Our expertise lies not only in crafting visually stunning advertisements but also in providing strategic consultancy services to enhance your brand's impact. Whether you're looking for a creative boost in advertising or insightful guidance, our film production team is here to elevate your brand to new heights. Partner with us for a seamless blend of creativity and strategic vision, ensuring your message resonates powerfully with your audience.">Agent</li>
+        <li class="list-item" data-info="As a film production agency, we serve as dedicated agents for all your meeting, exhibition, and commission needs. Specializing in creating engaging visual content, we transform ordinary gatherings into extraordinary experiences. Whether you're organizing a crucial business meeting, a vibrant exhibition, or commissioning unique projects, our team excels in crafting cinematic narratives that leave a lasting impression. With a keen eye for detail and a commitment to excellence, we seamlessly blend creativity and professionalism to ensure your events and commissions are not just successful but unforgettable. Trust us to bring your vision to life, making every moment a cinematic masterpiece.">Events</li>
         <li class="list-item" data-info="bh4 What Is Marketing?  promote the buying or selling of a product or service. Marketing includes advertising, selling, and delivering products to consumers or other businesses. Some marketing is done by affiliates on behalf of a company.">Consumer insights</li>
     </ul>
     <div class="details">
-        What Is Marketing?   Marketing includes advertising, s on behalf of a company.
+        At our film production company, we pride ourselves on offering a diverse range of services that cater to all your needs. From expert film production that brings stories to life on the big screen to meticulously planned and executed events that leave a lasting impact, we're your one-stop solution. Whether you're seeking top-notch production services, event management that exceeds expectations, or a host of other specialized offerings, our dedicated team is committed to turning your vision into reality. With creativity at our core and a comprehensive suite of services, we strive to elevate every project we undertake, ensuring unparalleled quality and satisfaction for our clients. Partner with us for a seamless and memorable experience across the spectrum of film production and beyond.
     </div>
 </div>
 
 
 
 
-<div class="tit scroll-animated">
-    <h6>OUR CLIENTS</h6>
+<div class="heading">
+    <span></span>
+    <h1>Our Clients</h1>
 </div>
-<div class="image-grid">
-
-    <div class="image-box scroll-animated">
-        <img src="your-image.jpg" alt="">
-        <p class="image-text"></p>
-    </div>
-    <div class="image-box scroll-animated">
-        <p class="image-text"></p>
-    </div>
-    <div class="image-box scroll-animated">
-        <p class="image-text"></p>
-    </div>
-    <div class="image-box scroll-animated">
-        <p class="image-text"></p>
-    </div>
-    <div class= "image-box scroll-animated">
-        <p class="image-text"></p>
-    </div>
-    <div class="image-box scroll-animated">
-        <p class="image-text"></p>
+<div class="gojam">
+<div class="scrollable-container">
+    <div class="image-grid">
+        <!-- Repeat for other images -->
+        <div class="image-item">
+            <img src="fere.jpg" alt="Image 1">
+            <div class="image-overlay">
+                <div class="overlay-text">Text for Image 1</div>
+            </div>
+        </div>
+        <div class="image-item">
+            <img src="rami.png" alt="Image 1">
+            <div class="image-overlay">
+                <div class="overlay-text">Text for Image 1</div>
+            </div>
+        </div>
+        <div class="image-item">
+            <img src="hyat.jpg" alt="Image 1">
+            <div class="image-overlay">
+                <div class="overlay-text">Text for Image 1</div>
+            </div>
+        </div>
+        <div class="image-item">
+            <img src="kg.jpg" alt="Image 1">
+            <div class="image-overlay">
+                <div class="overlay-text">Text for Image 1</div>
+            </div>
+        </div>
+        <div class="image-item">
+            <img src="kg.jpg" alt="Image 1">
+            <div class="image-overlay">
+                <div class="overlay-text">Text for Image 1</div>
+            </div>
+        </div>
+        <div class="image-item">
+            <img src="kg.jpg" alt="Image 1">
+            <div class="image-overlay">
+                <div class="overlay-text">Text for Image 1</div>
+            </div>
+        </div>
+        <!-- Repeat for other images -->
     </div>
 </div>
+</div>
+<style>
+     .heading h1 {
+    font-size: 2.5rem;
+    color: rgb(139, 139, 6);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+ }
+        h6 {
+            text-align: center;
+            font-size: 3vw;
+            margin-bottom: 2.5rem;
+            margin-top: 2em;
+            font-weight: bold; /* Responsive font size */
+        }
+        .gojam {
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow-x: hidden;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
 
+        .scrollable-container {
+            overflow-x: auto;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px;
+        }
+
+        .image-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 200px;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .image-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.459);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .image-item:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .overlay-text {
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s forwards;
+        }
+
+        .image-item:hover .overlay-text {
+            animation: fadeIn 0.5s forwards 0.2s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 1200px) {
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .heading h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+            .scrollable-container {
+                overflow-x: auto;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+            .scrollable-container {
+                overflow-x: auto;
+            }
+        }
+        @media screen and (max-width: 600px) {
+        .image-grid-container {
+            overflow-x: auto;
+            overflow-y: hidden; /* Hide vertical scrollbar */
+            white-space: nowrap; /* Prevent items from wrapping to the next line */
+        }
+
+        .image-grid {
+            display: inline-flex; /* Ensure the items stay in a single row */
+        }
+
+        .image-item {
+            flex: 0 0 auto; /* Disable flex shrinking to prevent items from collapsing */
+            width: 100%; /* Ensure each item takes the full width */
+        }
+        h6 {
+            font-size: 3vw; /* Adjust the font size for smaller screens */
+        }
+    }
+</style>
 
 
 
 <!--blogs-->
-<div class="tit scroll-animated">
-    <h6>BLOGS</h6>
+<div class="heading">
+    <span></span>
+    <h1>Blogs</h1>
 </div>
 <div class="lola scroll-animated">
     <div class="shadow-box scroll-animated">
-        <div class="image" style="background-image: url('./im1.jpg');"></div>
+        <div class="image" style="background-image: url('blog1\ \(2\).png');"></div>
         <div class="text">
-            <p>For instance, in some styles of writing, particularly journalistic styles.</p>
+            <p>The new challenge of rebuilding and renovating damaged health facilities in our country.</p>
         </div>
     </div>
     <div class="shadow-box scroll-animated">
-        <div class="image" style="background-image: url('./im1.jpg');"></div>
+        <div class="image" style="background-image: url('blog2.png');"></div>
         <div class="text">
-            <p>For instance, in some styles of writing, particularly journalistic styles.</p>
+            <p>Do you know about hydrocephalus and spina bifida in babies during pregnancy?</p>
         </div>
     </div>
     <div class="shadow-box scroll-animated">
-        <div class="image" style="background-image: url('./im1.jpg');"></div>
+        <div class="image" style="background-image: url('blog3.png');"></div>
         <div class="text">
-            <p>For instance, in some styles of writing, particularly journalistic styles.</p>
+            <p>Will using gloves really save you from Corona Virus?</p>
         </div>
     </div>
     
 </div>
+<style>
+     @media screen and (max-width: 768px) {
+        .shadow-box {
+            max-width: 80%; /* Adjust the maximum width for screens up to 768px wide */
+        }
 
+        .image {
+            height: 200px; /* Adjust the height for screens up to 768px wide */
+        }
+
+        .text {
+            padding: 15px; /* Adjust padding for smaller screens */
+            font-size: 14px; /* Adjust font size for screens up to 768px wide */
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .shadow-box {
+            max-width: 90%; /* Further adjust the maximum width for screens up to 480px wide */
+        }
+
+        .image {
+            height: 150px; /* Further adjust the height for screens up to 480px wide */
+        }
+
+        .text {
+            padding: 10px; /* Further adjust padding for smaller screens */
+            font-size: 12px; /* Further adjust font size for screens up to 480px wide */
+        }
+    }
+</style>
 <section class="contact" id="contact">
     <div class="social">
         <a href="#"><i class='bx bxl-facebook'></i></a>
@@ -434,7 +1215,7 @@
 </section>
      <!--link to custom js-->
      
-     <script src="script.js"></script>
+  
      <script>
         // JavaScript to display details when hovering over a list item
         const listItems = document.querySelectorAll('.list-item');
@@ -447,7 +1228,7 @@
     
             item.addEventListener('mouseout', () => {
                 // Reset the details when not hovering
-                detailsContainer.textContent = 'Quickly and easily add a white background to your images. Simply upload your image file to PhotoRoom, and select the white color you want in the background';
+                detailsContainer.textContent = 'At our film production company, we pride ourselves on offering a diverse range of services that cater to all your needs. From expert film production that brings stories to life on the big screen to meticulously planned and executed events that leave a lasting impact, we are one-stop solution. Whether you are seeking top-notch production services, event management that exceeds expectations, or a host of other specialized offerings, our dedicated team is committed to turning your vision into reality. With creativity at our core and a comprehensive suite of services, we strive to elevate every project we undertake, ensuring unparalleled quality and satisfaction for our clients. Partner with us for a seamless and memorable experience across the spectrum of film production and beyond.';
             });
         });
     </script>
@@ -467,6 +1248,22 @@ function checkScrollAnimated() {
 
 window.addEventListener("scroll", checkScrollAnimated);
 window.addEventListener("load", checkScrollAnimated);
+
+    </script>
+    <script>
+     const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+    
+    
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            })
+            document.querySelectorAll(".nav-link").forEach(n=> n.
+            addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            }))
 
     </script>
 </body>
