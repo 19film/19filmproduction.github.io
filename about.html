@@ -1,215 +1,236 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Simple Webpage</title>
-  <link rel="stylesheet" href="about.css">
-  <link rel="stylesheet" href="macha.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bita.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
 </head>
 <body>
-  <style>
-    .scroll-animated {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.5s, transform 0.5s;
-    }
-
-    .scroll-animated.animate {
-        opacity: 1;
-        transform: translateY(0);
-    }
-</style>
-<!--navbar-->
-<header>
-<nav class="navbar">
-    <a href="#" class="logo"><img src="./lo.png"></a>
-    <ul class="nav-menu">
-        <li class="nav-item">
-            <a href="index.html" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-            <a href="pita.html" class="nav-link">Portfolio</a>
-        </li>
-        <li class="nav-item">
-            <a href="about.html" class="nav-link">About</a>
-        </li>
-        <li class="nav-item">
-            <a href="blogs.html" class="nav-link">Blogs</a>
-        </li>
-    </ul>
-    <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
-</nav>
-</header>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="./lo.png"></a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pita.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blogs.html" class="nav-link">Blogs</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
 
 
-
-<div class="heading">
-  <h1>About Us</h1>
-  <p>"Crafting Cinematic Excellence: Unveiling Stories, Creating Memories at 19Film Production"</p>
-  </div>
- 
-<div class="container">
-  <div class="about">
-    <div class="about-image">
-      <img src="im1.jpg">
-    </div>
-    <div class="about-content">
-      <h2></h2>
-      <p>Welcome to 19Film Production, where storytelling meets craftsmanship in the world of visual narratives. Founded with a passion for capturing moments that resonate, we are a dynamic film production company committed to bringing your stories to life. From concept to execution, we specialize in providing a comprehensive suite of services, including expert film production, meticulous event management, and a range of creative solutions tailored to your unique needs. At 19Film Production, we believe in the power of storytelling to inspire, captivate, and connect. Our dedicated team brings together expertise and innovation to deliver cinematic experiences that leave a lasting impression. Join us on a journey where every frame tells a story, and every project is a testament to our commitment to excellence. Welcome to the art of visual storytelling; welcome to 19Film Production.</p>
-    
-  </div>
-</div>
-
-
-
-<style>
-      .image-container {
-        position: relative;
-        display: inline-block;
-        text-align: center;
-        margin: 30px; /* Add space around each image container */
-      }
-  
-      .image-container img {
-        width: 200px; /* Adjust the width as needed */
-        height: 200px; /* Adjust the height as needed */
-        transition: transform 0.3s;
-      }
-  
-      .image-container img:hover {
-        transform: scale(1.1); /* Increase the image size on hover */
-      }
-  
-      .image-text {
-        font-size: 16px;
-        color: #333;
-        margin-top: 10px; /* Add space between the image and text */
-      }
-  
-      /* Arrange images in a 2-row, 3-column grid */
-      .image-row {
-        text-align: center;
-      }
-      h6 {
-            text-align: center;
-            font-size: 3vw;
-            margin-bottom: 2.5rem;
-            margin-top: 2em;
-            font-weight: bold; /* Responsive font size */
-        }
-    </style>
-  </head>
-  <body>
     <div class="heading">
-      <span></span>
-      <h1>Our Team</h1>
-  </div>
-    <div class="image-row">
-      <div class="image-container">
-        <img src="im1.jpg" alt="Image 1" onmouseover="changeImage(this)" onmouseout="restoreImage(this)">
-        <h1 class="image-text">Image 1</h1>
-        <h1 class="image-text">Image polo</h1>
-      </div>
-      <div class="image-container">
-        <img src="im2.jpg" alt="Image 2" onmouseover="changeImage(this)" onmouseout="restoreImage(this)">
-        <h1 class="image-text">Image 2</h1>
-        <h1 class="image-text">Image polo</h1>
-      </div>
-      <div class="image-container">
-        <img src="dg.png" alt="Image 3" onmouseover="changeImage(this)" onmouseout="restoreImage(this)">
-        <h1 class="image-text">Image 3</h1>
-        <h1 class="image-text">Image polo</h1>
-      </div>
-    </div>
-    <div class="image-row">
-      <div class="image-container">
-        <img src="im4.jpg" alt="Image 4" onmouseover="changeImage(this)" onmouseout="restoreImage(this)">
-        <h1 class="image-text">Image 4</h1>
-        <h1 class="image-text">Image polo</h1>
-      </div>
-      <div class="image-container">
-        <img src="im5.jpg" alt="Image 5" onmouseover="changeImage(this)" onmouseout="restoreImage(this)">
-        <h1 class="image-text">Image 5</h1>
-        <h1 class="image-text">Image polo</h1>
-      </div>
-      <div class="image-container">
-        <img src="19.jpg" alt="Image 6" onmouseover="changeImage(this)" onmouseout="restoreImage(this)">
-        <h1 class="image-text">Image 6</h1>
-        <h1 class="image-text">Image polo</h1>
-      </div>
-    </div>
-    <section class="contact" id="contact">
-      <div class="social">
-          <a href="#"><i class='bx bxl-facebook'></i></a>
-          <a href="#"><i class='bx bxl-twitter'></i></a>
-          <a href="#"><i class='bx bxl-instagram'></i></a>
-          <a href="#"><i class='bx bxl-youtube'></i></a> 
-      </div>
-  <div class="links">
-  <a href="#">Privacy Policy</a>
-  <a href="#">Terms of Use</a>
-  <a href="#">Our company</a>
-  </div>
-  <p>&#150; HilinaTesfaye All Right Reserved.</p>
-  </section>
+        <h1>About Us</h1>
+        <p>"Crafting Cinematic Excellence: Unveiling Stories, Creating Memories at 19Film Production"</p>
+        </div>
+        <div class="container">
+            <div class="about">
+              <div class="about-image">
+                <img src="aa.jpg">
+              </div>
+              <div class="about-content">
+                <h2></h2>
+                <p>Welcome to 19Film Production, where storytelling meets craftsmanship in the world of visual narratives. Founded with a passion for capturing moments that resonate, we are a dynamic film production company committed to bringing your stories to life. From concept to execution, we specialize in providing a comprehensive suite of services, including expert film production, meticulous event management, and a range of creative solutions tailored to your unique needs. At 19Film Production, we believe in the power of storytelling to inspire, captivate, and connect. Our dedicated team brings together expertise and innovation to deliver cinematic experiences that leave a lasting impression. Join us on a journey where every frame tells a story, and every project is a testament to our commitment to excellence. Welcome to the art of visual storytelling; welcome to 19Film Production.</p>
+              
+            </div>
+          </div>
+          </div>
+
+
+          <div class="heading">
+            <span></span>
+            <h1></h1>
+        </div>
   
-  
-  
-  
-  
-      <!--link to custom js-->
-      <script src="main.js"></script>
-      <script src="script.js"></script>
-      <script>
-          // JavaScript to display details when hovering over a list item
-          const listItems = document.querySelectorAll('.list-item');
-          const detailsContainer = document.querySelector('.details');
-      
-          listItems.forEach((item) => {
-            item.addEventListener('mouseover', () => {
-              detailsContainer.textContent = item.getAttribute('data-info');
-            });
-      
-            item.addEventListener('mouseout', () => {
-              detailsContainer.textContent = '';
-            });
-          });
-        </script>
-         
+
+        <section class="team">
+            <div class="center">
+                <h1>Our Team</h1>
+            </div>
+    
+            <div class="team-content">
+                <div class="box">
+                    <img src="team2.jpg">
+                    <h3>Meron Tesfaye</h3>
+                    <h5>Artist</h5>
+                    <div class="icons">
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                        <a href="#"><i class="ri-facebook-box-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+    
+                <div class="box">
+                    <img src="team1.jpg">
+                    <h3>Steph Jobs</h3>
+                    <h5>Artist</h5>
+                    <div class="icons">
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                        <a href="#"><i class="ri-facebook-box-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+    
+                <div class="box">
+                    <img src="team3.jpg">
+                    <h3>Steph Jobs</h3>
+                    <h5>Artist</h5>
+                    <div class="icons">
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                        <a href="#"><i class="ri-facebook-box-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+          <div class="box">
+                    <img src="team4.jpg">
+                    <h3>Dr Etsehiwot h/slase</h3>
+                    <h5>Artist</h5>
+                    <div class="icons">
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                        <a href="#"><i class="ri-facebook-box-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="team5.jpg">
+                    <h3>Dr Zelalm Gizachew</h3>
+                    <h5>Artist</h5>
+                    <div class="icons">
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                        <a href="#"><i class="ri-facebook-box-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="newc.jpg">
+                    <h3>Steph Jobs</h3>
+                    <h5>Artist</h5>
+                    <div class="icons">
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                        <a href="#"><i class="ri-facebook-box-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+    
+    
+    
+            </div>
+        </section>
+    <style>
+    .team{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .team-content{
+        width: 100%;
+        max-width: 1350px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+        align-items: center;
+        gap: 2rem;
+        text-align: center;
+        margin-top: 4rem;
+    }
+    .team-content img{
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        margin-bottom: 15px;
+    }
+    .center h1{
+        color: black;
+        font-size: 4rem;
+        text-align: center;
+    }
+    .box{
+        padding: 16px;
+        background: #1b1229;
+        border-radius: 15px;
+        transition: all .38s ease;
+    }
+    .box h3{
+        font-size: 23px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 8px;
+    }
+    .box h5{
+        font-size: 15px;
+        font-weight: 600;
+        color: #b7b4bb;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+    }
+    .icons i{
+        display: inline-block;
+        color: #fff;
+        font-size: 20px;
+        margin: 0 8px;
+        transition: all .38s ease;
+    }
+    .icons i:hover{
+        transform: scale(1.2);
+    }
+    .box:hover{
+        transform: translateY(-10px);
+        cursor: pointer;
+    }
+    
+    @media(max-width: 1240px){
+        .team{
+            width: 100%;
+            height: auto;
+            padding: 90px 2%;
+        }
+        .center h1{
+            font-size: 3.2rem;
+        }
+    }
+    </style>
+          
+          <section class="contact" id="contact">
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a> 
+            </div>
+        <div class="links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Our company</a>
+        </div>
+        <p>&#150; HilinaTesfaye All Right Reserved.</p>
+        </section>
+
     <script>
-      function changeImage(img) {
-        img.src = "19.jpg";
-      }
-  
-      function restoreImage(img) {
-        img.src = "im1.jpg";
-      }
-    </script>
-       <script>
-           const scrollElements = document.querySelectorAll(".scroll-animated");
-   
-           function checkScroll() {
-               scrollElements.forEach((element) => {
-                   const elementTop = element.getBoundingClientRect().top;
-                   if (elementTop < window.innerHeight - 20) {
-                       element.classList.add("animate");
-                   } else {
-                       element.classList.remove("animate");
-                   }
-               });
-           }
-   
-           window.addEventListener("scroll", checkScroll);
-           window.addEventListener("load", checkScroll);
-       </script>
-      
-           <script>
-               const hamburger = document.querySelector(".hamburger");
+        const hamburger = document.querySelector(".hamburger");
                const navMenu = document.querySelector(".nav-menu");
        
        
@@ -222,7 +243,7 @@
                    hamburger.classList.remove("active");
                    navMenu.classList.remove("active");
                }))
-               </script>
-           
+   
+       </script>
 </body>
 </html>
