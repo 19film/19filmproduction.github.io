@@ -9,6 +9,67 @@
     scroll-behavior: smooth;
     font-family:"Agbalumo" ;
 }
+header{
+   background-color: white;
+ 
+}
+li{
+   list-style: none;
+   margin-bottom: 1em;
+}
+a{
+   color: black;
+   text-decoration: none;
+   font-size: 25px;
+   font-weight: bold;
+}
+.navbar{
+   min-height:70px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 24px;
+}
+.nav-menu{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 60px;
+}
+.logo
+{
+   position: relative;
+   margin-top: 10px;
+   display: flex;
+}
+
+/* Add this CSS rule to set the size of the logo image */
+.logo-img {
+   width: 20px; /* Adjust the width to make the logo smaller */
+   height: auto; /* This maintains the aspect ratio */
+}
+.nav-link{
+   transition:0.7s ease;
+
+}
+.nav-link:hover{
+   color: yellow;
+}
+.hamburger{
+   display: none;
+   cursor: pointer;
+   
+}
+.bar{
+   display: block;
+   width: 25px;
+   height: 3px;
+   margin: 5px auto;
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   background-color: black;
+
+}
 .heading{
     width: 90%;
     display: flex;
@@ -165,7 +226,8 @@ h6 {
 .contact p{
     text-align: center;
 }
-@media screen and(max-width:768px) {
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
     .heading{
         padding: 0px 20px;
     }
@@ -191,4 +253,565 @@ h6 {
         padding: 0px;
         font-size: 16px;
     }
+
+
+    .nav-menu {
+        margin-top: 50px;
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        z-index: 1500; /* Adjusted z-index */
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        z-index: 1500; /* Make sure the z-index is the same when active */
+    }
+
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 30px;
+        right: 24px;
+        z-index: 1001;
+        color: black;
+
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translate(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translate(-8px) rotate(-45deg);
+    }
+    .home-text span {
+        font-size: 0.8rem; /* Adjust the font size for smaller screens */
+    }
+
+    .home-text h1 {
+        font-size: 2rem; /* Adjust the font size for smaller screens */
+    }
+
+    .home-text h2 {
+        font-size: 1rem; /* Adjust the font size for smaller screens */
+    }
+    .shop h1 {
+        font-size: 2rem; /* Adjust the font size for smaller screens */
+    }
+
+    .box h2 {
+        font-size: 1rem; /* Adjust the font size for smaller screens */
+    }
+    .konta {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .list {
+        width: 100%; /* Adjust the width for smaller screens */
+        margin-top: 1rem;
+    }
+
+    .details {
+        width: 100%; /* Adjust the width for smaller screens */
+        margin-top: 1rem;
+    }
+
 }
+/* ... Your existing styles ... */
+
+/* Additional styles for screens up to 600px */
+@media (max-width: 600px) {
+   .logo-img {
+       width: 15px; /* Adjust the width for smaller screens */
+   }
+
+   .hamburger {
+       /* Customize styles for smaller screens */
+       top: 30px;
+       right: 30px;
+   }
+
+   .nav-menu {
+       margin-top: 50px;
+       display: none;
+       position: fixed;
+       top: 70px;
+       left: 0;
+       background-color: white;
+       width: 100%;
+       text-align: center;
+       z-index: 1500; /* Adjusted z-index */
+   }
+
+   .nav-menu.active {
+       display: flex;
+       flex-direction: column;
+       z-index: 1500; /* Make sure the z-index is the same when active */
+   }
+
+   .hamburger.active .bar:nth-child(2) {
+       opacity: 0;
+   }
+
+   .hamburger.active .bar:nth-child(1) {
+       transform: translate(8px) rotate(45deg);
+   }
+
+   .hamburger.active .bar:nth-child(3) {
+       transform: translate(-8px) rotate(-45deg);
+   }
+
+   .home-text span {
+       font-size: 0.8rem;
+   }
+
+   .home-text h1 {
+       font-size: 2rem;
+   }
+
+   .home-text h2 {
+       font-size: 1rem;
+   }
+}
+
+/* Additional styles for screens up to 480px */
+@media (max-width: 480px) {
+   .logo-img {
+       width: 12px; /* Adjust the width for smaller screens */
+   }
+
+   .hamburger {
+       /* Customize styles for smaller screens */
+       top: 30px;
+       right: 20px;
+   }
+
+   .nav-menu {
+       margin-top: 50px;
+       display: none;
+       position: fixed;
+       top: 70px;
+       left: 0;
+       background-color: white;
+       width: 100%;
+       text-align: center;
+       z-index: 1500; /* Adjusted z-index */
+   }
+
+   .nav-menu.active {
+       display: flex;
+       flex-direction: column;
+       z-index: 1500; /* Make sure the z-index is the same when active */
+   }
+
+   .hamburger.active .bar:nth-child(2) {
+       opacity: 0;
+   }
+
+   .hamburger.active .bar:nth-child(1) {
+       transform: translate(8px) rotate(45deg);
+   }
+
+   .hamburger.active .bar:nth-child(3) {
+       transform: translate(-8px) rotate(-45deg);
+   }
+
+   .home-text span {
+       font-size: 0.7rem;
+   }
+
+   .home-text h1 {
+       font-size: 1.8rem;
+   }
+
+   .home-text h2 {
+       font-size: 0.9rem;
+   }
+
+   .image-grid {
+       grid-template-columns: 1fr;
+   }
+
+   .image-item {
+       height: 120px;
+   }
+
+   .shadow-box {
+       max-width: 90%;
+   }
+
+   .text {
+       padding: 8px;
+       font-size: 11px;
+   }
+}
+
+
+@media (max-width: 576px) {
+   .logo-img {
+       width: 15px; /* Adjust the width for smaller screens */
+   }
+
+   .hamburger {
+       /* Customize styles for smaller screens */
+       top: 30px;
+       right: 30px;
+
+   }
+   .nav-menu {
+       display: none;
+       margin-top: 50px;
+       position: fixed;
+       top: 70px;
+       left: 0;
+       background-color: white;
+       width: 100%;
+       text-align: center;
+       z-index: 1500; /* Adjusted z-index */
+   }
+
+   .nav-menu.active {
+       display: flex;
+       flex-direction: column;
+       z-index: 1500; /* Make sure the z-index is the same when active */
+   }
+   .hamburger.active .bar:nth-child(2) {
+       opacity: 0;
+   }
+
+   .hamburger.active .bar:nth-child(1) {
+       transform: translate(8px) rotate(45deg);
+   }
+
+   .hamburger.active .bar:nth-child(3) {
+       transform: translate(-8px) rotate(-45deg);
+   }
+   /* Add any additional styles for smaller screens here */
+}
+/* Additional styles for screens up to 400px */
+@media (max-width: 400px) {
+   .logo-img {
+       width: 10px; /* Adjust the width for smaller screens */
+   }
+
+   .hamburger {
+       /* Customize styles for smaller screens */
+       top: 20px;
+       right: 15px;
+   }
+
+   .nav-menu {
+       margin-top: 50px;
+       display: none;
+       position: fixed;
+       top: 70px;
+       left: 0;
+       background-color: white;
+       width: 100%;
+       text-align: center;
+       z-index: 1500; /* Adjusted z-index */
+   }
+
+   .nav-menu.active {
+       display: flex;
+       flex-direction: column;
+       z-index: 1500; /* Make sure the z-index is the same when active */
+   }
+
+   .hamburger.active .bar:nth-child(2) {
+       opacity: 0;
+   }
+
+   .hamburger.active .bar:nth-child(1) {
+       transform: translate(8px) rotate(45deg);
+   }
+
+   .hamburger.active .bar:nth-child(3) {
+       transform: translate(-8px) rotate(-45deg);
+   }
+
+   .home-text span {
+       font-size: 0.6rem;
+   }
+
+   .home-text h1 {
+       font-size: 1.6rem;
+   }
+
+   .home-text h2 {
+       font-size: 0.8rem;
+   }
+
+   .image-grid {
+       grid-template-columns: 1fr;
+   }
+
+   .image-item {
+       height: 100px;
+   }
+
+   .shadow-box {
+       max-width: 80%;
+   }
+
+   .text {
+       padding: 6px;
+       font-size: 10px;
+   }
+}
+
+@media (max-width: 320px) {
+   /* Custom styles for screens up to 320px */
+   .logo-img {
+       width: 15px; /* Adjust the width for smaller screens */
+   }
+
+   .hamburger {
+       /* Customize styles for smaller screens */
+       top: 30px;
+       right: 30px;
+
+   }
+
+   .nav-menu {
+       display: none;
+       margin-top: 50px;
+       position: fixed;
+       top: 70px;
+       left: 0;
+       background-color: white;
+       width: 100%;
+       text-align: center;
+       z-index: 1500; /* Adjusted z-index */
+   }
+
+   .nav-menu.active {
+       display: flex;
+       flex-direction: column;
+       z-index: 1500; /* Make sure the z-index is the same when active */
+   }
+   .hamburger.active .bar:nth-child(2) {
+       opacity: 0;
+   }
+
+   .hamburger.active .bar:nth-child(1) {
+       transform: translate(8px) rotate(45deg);
+   }
+
+   .hamburger.active .bar:nth-child(3) {
+       transform: translate(-8px) rotate(-45deg);
+   }
+   .home-text span {
+       font-size: 0.6rem;
+   }
+
+   .home-text h1 {
+       font-size: 1.6rem;
+   }
+
+   .home-text h2 {
+       font-size: 0.8rem;
+   }
+
+   .image-grid {
+       grid-template-columns: 1fr;
+   }
+
+   .image-item {
+       height: 100px;
+   }
+
+   .shadow-box {
+       max-width: 80%;
+   }
+
+   .text {
+       padding: 6px;
+       font-size: 10px;
+   }
+   /* Add any additional styles for smaller screens here */
+}
+@media (max-width: 576px) {
+   .logo-img {
+       width: 15px; /* Adjust the width for smaller screens */
+   }
+
+   .hamburger {
+       /* Customize styles for smaller screens */
+       top: 30px;
+       right: 30px;
+
+   }
+   .nav-menu {
+       margin-top: 50px;
+       display: none;
+       position: fixed;
+       top: 70px;
+       left: 0;
+       background-color: white;
+       width: 100%;
+       text-align: center;
+       z-index: 1500; /* Adjusted z-index */
+   }
+
+   .nav-menu.active {
+       display: flex;
+       flex-direction: column;
+       z-index: 1500; /* Make sure the z-index is the same when active */
+   }
+   .hamburger.active .bar:nth-child(2) {
+       opacity: 0;
+   }
+
+   .hamburger.active .bar:nth-child(1) {
+       transform: translate(8px) rotate(45deg);
+   }
+
+   .hamburger.active .bar:nth-child(3) {
+       transform: translate(-8px) rotate(-45deg);
+   }
+   /* Add any additional styles for smaller screens here */
+}
+@media (max-width: 414px) {
+   /* Custom styles for screens up to 414px */
+   .logo-img {
+       width: 15px; /* Adjust the width for smaller screens */
+   }
+
+   .hamburger {
+       /* Customize styles for smaller screens */
+       top: 30px;
+       right: 30px;
+
+   }
+   .nav-menu {
+       margin-top: 50px;
+       display: none;
+       position: fixed;
+       top: 70px;
+       left: 0;
+       background-color: white;
+       width: 100%;
+       text-align: center;
+       z-index: 1500; /* Adjusted z-index */
+   }
+
+   .nav-menu.active {
+       display: flex;
+       flex-direction: column;
+       z-index: 1500; /* Make sure the z-index is the same when active */
+   }
+   .hamburger.active .bar:nth-child(2) {
+       opacity: 0;
+   }
+
+   .hamburger.active .bar:nth-child(1) {
+       transform: translate(8px) rotate(45deg);
+   }
+
+   .hamburger.active .bar:nth-child(3) {
+       transform: translate(-8px) rotate(-45deg);
+   }
+   /* Add any additional styles for smaller screens here */
+}
+
+/* Additional styles for screens up to 375px */
+@media (max-width: 375px) {
+   /* Custom styles for screens up to 375px */
+   .logo-img {
+       width: 15px; /* Adjust the width for smaller screens */
+   }
+
+   .hamburger {
+       /* Customize styles for smaller screens */
+       top: 30px;
+       right: 30px;
+
+   }
+   .nav-menu {
+       margin-top: 50px;
+       display: none;
+       position: fixed;
+       top: 70px;
+       left: 0;
+       background-color: white;
+       width: 100%;
+       text-align: center;
+       z-index: 1500; /* Adjusted z-index */
+   }
+
+   .nav-menu.active {
+       display: flex;
+       flex-direction: column;
+       z-index: 1500; /* Make sure the z-index is the same when active */
+   }
+   .hamburger.active .bar:nth-child(2) {
+       opacity: 0;
+   }
+
+   .hamburger.active .bar:nth-child(1) {
+       transform: translate(8px) rotate(45deg);
+   }
+
+   .hamburger.active .bar:nth-child(3) {
+       transform: translate(-8px) rotate(-45deg);
+   }
+   /* Add any additional styles for smaller screens here */
+}
+
+/* Additional styles for screens up to 320px */
+@media (max-width: 320px) {
+   /* Custom styles for screens up to 320px */
+   .logo-img {
+       width: 15px; /* Adjust the width for smaller screens */
+   }
+
+   .hamburger {
+       /* Customize styles for smaller screens */
+       top: 30px;
+       right: 30px;
+
+   }
+   .nav-menu {
+       margin-top: 50px;
+       display: none;
+       position: fixed;
+       top: 70px;
+       left: 0;
+       background-color: white;
+       width: 100%;
+       text-align: center;
+       z-index: 1500; /* Adjusted z-index */
+   }
+
+   .nav-menu.active {
+       display: flex;
+       flex-direction: column;
+       z-index: 1500; /* Make sure the z-index is the same when active */
+   }
+   .hamburger.active .bar:nth-child(2) {
+       opacity: 0;
+   }
+
+   .hamburger.active .bar:nth-child(1) {
+       transform: translate(8px) rotate(45deg);
+   }
+
+   .hamburger.active .bar:nth-child(3) {
+       transform: translate(-8px) rotate(-45deg);
+   }
+   /* Add any additional styles for smaller screens here */
+}
+     
+
