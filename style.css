@@ -23,6 +23,75 @@ img {
 
 
 
+.news{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 4rem;
+    color: dodgerblue;
+}
+.news-img img{
+    width:100%;
+    height: auto;
+}
+.news-text h2{
+    font-size: var(--h2-font);
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
+.news span{
+  color: white;
+}
+.news-text p{
+    color:var(--second-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+    margin-left: 3rem;
+}
+.middle-text{
+    text-align: center;
+}
+.middle-text h4{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--main-color);
+}
+.middle-text h2{
+    font-size: var(--h2-font);
+    color: dodgerblue;
+}
+.middle-text span{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -52,6 +121,9 @@ img {
 /* Make the image responsive and smaller */
 .home-img img {
     animation: animate 3s linear infinite; 
+    width: 100%; /* Make the image take up 100% of its container's width */
+    max-width: 100%; /* Ensure the image does not exceed its original size */
+    height: auto;
 }
 @keyframes animate{
     0% {
@@ -126,6 +198,8 @@ h6 {
  .heading {
     text-align: center;
     text-transform: uppercase;
+    align-items: center; /* Center items vertically */
+
  }
  .heading span {
     font-size:1rem;
@@ -137,7 +211,38 @@ h6 {
     color: rgb(139, 139, 6);
     margin-top: 3rem;
     margin-bottom: 3rem;
+    
  }
+ .headin {
+    text-align: center;
+    text-transform: uppercase;
+    align-items: center; /* Center items vertically */
+     display: flex;
+ }
+ .headin h3 {
+    font-size: 2.5rem;
+    color: rgb(139, 139, 6);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-right: 20px;
+    margin-left: 4em;
+    animation: zoomInOut 2s ease-in-out infinite; /* Adjust the animation duration and timing function as needed */
+
+ }
+ @keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+ .headin img{
+    max-height: 50px;
+    max-width:50px ;
+    vertical-align: middle;
+}
+
  .shop-container {
     display:flex;
     flex-wrap:wrap;
@@ -313,6 +418,7 @@ h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 5rem;
 }
 .social a{
     font-size: 27px;
@@ -519,6 +625,11 @@ h6 {
     .home-img img {
         max-width: 100%; /* Ensure the image doesn't exceed the container width */
         height: auto; /* Allow the image to scale proportionally */
+    }
+}
+@media screen and (max-width: 600px) {
+    .home-img {
+        margin-top: 20px; /* Add some top margin for better spacing on small screens */
     }
 }
 
