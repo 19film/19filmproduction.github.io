@@ -1,8 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family:"Agbalumo" ;
+}
 header{
-    background-color: transparent;
+    background-color: white;
   
 }
 li{
@@ -32,12 +40,13 @@ a{
 {
     position: relative;
     margin-top: 10px;
+    display: flex;
 }
 
 /* Add this CSS rule to set the size of the logo image */
 .logo-img {
     width: 20px; /* Adjust the width to make the logo smaller */
-    height: 20px; /* This maintains the aspect ratio */
+    height: auto; /* This maintains the aspect ratio */
 }
 .nav-link{
     transition:0.7s ease;
@@ -61,7 +70,26 @@ a{
     background-color: black;
 
 }
+
+
 @media(max-width:768px){
+    .nav-menu {
+        position: fixed;
+        left: -130%;
+        top: 70px; /* Adjust the top position as needed */
+        gap: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 1000;
+        margin-top: 1.5em;
+    }
+ 
+    .nav-menu.active {
+        left: 0;
+    }
     .hamburger{
         display: block;
     }
@@ -96,4 +124,154 @@ a{
     .nav-menu.active{
         left: 0;
     }
+}
+@media (max-width: 576px) {
+    .logo-img {
+        width: 15px; /* Adjust the width for smaller screens */
+    }
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+     opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translate(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translate(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position:fixed ;
+        left: -130%;
+        top:130px;
+        gap:0;
+        flex-direction: column;
+        background-color:white;
+        width: 100%;
+        text-align:center;
+        transition: 0.3s;
+        z-index: 1000;
+        margin-top: 1.5em;
+
+    }
+    .nav-item{
+        margin: 16px 0;
+        color: black;
+       
+    }
+    .nav-menu.active{
+        left: 0;
+    }/* Adjust styles for screens up to 576px wide (phones) */
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+     opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translate(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translate(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position:fixed ;
+        left: -130%;
+        top:130px;
+        gap:0;
+        flex-direction: column;
+        background-color:white;
+        width: 100%;
+        text-align:center;
+        transition: 0.3s;
+        z-index: 1000;
+        margin-top: 1.5em;
+
+    }
+    .nav-item{
+        margin: 16px 0;
+        color: black;
+       
+    }
+    .nav-menu.active{
+        left: 0;
+    } /* Adjust styles for screens from 577px to 768px wide (tablets) */
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+     opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translate(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translate(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position:fixed ;
+        left: -130%;
+        top:130px;
+        gap:0;
+        flex-direction: column;
+        background-color:white;
+        width: 100%;
+        text-align:center;
+        transition: 0.3s;
+        z-index: 1000;
+        margin-top: 1.5em;
+
+    }
+    .nav-item{
+        margin: 16px 0;
+        color: black;
+       
+    }
+    .nav-menu.active{
+        left: 0;
+    } /* Adjust styles for screens from 769px to 992px wide (small laptops) */
+}
+
+/* Large devices (desktops) */
+@media (min-width: 375px) and (max-width: 667px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+     opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translate(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translate(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position:fixed ;
+        left: -130%;
+        top:130px;
+        gap:0;
+        flex-direction: column;
+        background-color:white;
+        width: 100%;
+        text-align:center;
+        transition: 0.3s;
+        z-index: 1000;
+        margin-top: 1.5em;
+
+    }
+    .nav-item{
+        margin: 16px 0;
+        color: black;
+       
+    }
+    .nav-menu.active{
+        left: 0;
+    } 
 }
