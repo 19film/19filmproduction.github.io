@@ -35,6 +35,9 @@
                     <a href="index.html" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
+                    <a href="#news" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
                     <a href="pita.html" class="nav-link">Portfolio</a>
                 </li>
                 <li class="nav-item">
@@ -708,8 +711,26 @@ a{
          window.addEventListener("scroll", checkScroll);
          window.addEventListener("load", checkScroll);
      </script>
+   <!--news--> 
+  
+   <section class="news" id="news">
+    <div class="news-text">
+        <div class="headin">
+            <span></span>
+            <h3>Latest news</h3>
+            <img src="roto.gif" alt="Image">
+        </div>
+        <p> Et-health Alley and NEP+ join forces in a visionary partnership, with Et-health Alley serving as the creative powerhouse to celebrate Nep+'s extraordinary 20-year journey. This collaboration goes beyond an agreement, weaving innovation and passion into a dynamic narrative that elevates NEP+'s legacy with a burst of creativity and flair. Together, they embark on a condensed yet impactful journey, marking two decades of resilience and progress in a shared story of achievement.</p>
     
-        
+    </div>
+    <div class="news-img">
+        <img src="ol.jpg">
+    </div>
+</section>    
+
+
+
+
 <section class="shop" id="shop">
     <div class="heading">
         <span></span>
@@ -728,7 +749,7 @@ a{
         </div>
         <h2>Advertising</h2>
         <span></span>
-        <a href="#" class="btn">Contact Us</a>
+        <a href="#contact" class="btn">Contact Us</a>
     </div>
     <div class="box">
         <div class="box-img">
@@ -742,7 +763,7 @@ a{
         </div>
         <h2>Medical Movie</h2>
         <span></span>
-        <a href="#" class="btn">Contact Us</a>
+        <a href="#contact" class="btn">Contact Us</a>
     </div>
     <div class="box">
         <div class="box-img">
@@ -756,7 +777,7 @@ a{
         </div>
         <h2>Documentary</h2>
         <span></span>
-        <a href="#" class="btn">Contact Us</a>
+        <a href="#contact" class="btn">Contact Us</a>
     </div>
     <div class="box">
         <div class="box-img">
@@ -770,7 +791,7 @@ a{
         </div>
         <h2>Medical Consulting</h2>
         <span></span>
-        <a href="#" class="btn">Contact Us</a>
+        <a href="#contact" class="btn">Contact Us</a>
     </div>
   </div>
 
@@ -932,7 +953,7 @@ a{
         <li class="list-item" data-info="Discover something new with our TV and radio ads! Imagine a lively TV commercial showing our cool wireless earbuds fixing annoying cord issues. On the radio, we share stories about people, just like you, finding solutions to everyday problems with our awesome product. Ready for a change? Visit our website or call now for a special deal. Our ads aren't just about watching or listening – they're about making your life better. Try it out and experience something amazing with our TV and radio commercials because you deserve it!">Production</li>
         <li class="list-item" data-info="We are your go-to film production team, acting as dynamic agents for advertising and trusted consultants. With a passion for storytelling, we bring brands to life through captivating visuals and compelling narratives. Our expertise lies not only in crafting visually stunning advertisements but also in providing strategic consultancy services to enhance your brand's impact. Whether you're looking for a creative boost in advertising or insightful guidance, our film production team is here to elevate your brand to new heights. Partner with us for a seamless blend of creativity and strategic vision, ensuring your message resonates powerfully with your audience.">Agent</li>
         <li class="list-item" data-info="As a film production agency, we serve as dedicated agents for all your meeting, exhibition, and commission needs. Specializing in creating engaging visual content, we transform ordinary gatherings into extraordinary experiences. Whether you're organizing a crucial business meeting, a vibrant exhibition, or commissioning unique projects, our team excels in crafting cinematic narratives that leave a lasting impression. With a keen eye for detail and a commitment to excellence, we seamlessly blend creativity and professionalism to ensure your events and commissions are not just successful but unforgettable. Trust us to bring your vision to life, making every moment a cinematic masterpiece.">Events</li>
-        <li class="list-item" data-info="bh4 What Is Marketing?  promote the buying or selling of a product or service. Marketing includes advertising, selling, and delivering products to consumers or other businesses. Some marketing is done by affiliates on behalf of a company.">Consumer insights</li>
+        <li class="list-item" data-info="Consumer insights are crucial in film production for tailoring content to the target audience. By understanding demographics, psychographics, and genre preferences, filmmakers can create engaging narratives that resonate. Social media analysis, feedback from previous films, and test screenings offer valuable input for real-time adjustments. Incorporating data analytics and considering global factors enhance the chances of producing a successful film that aligns with audience expectations.">Consumer insights</li>
     </ul>
     <div class="details">
         At our film production company, we pride ourselves on offering a diverse range of services that cater to all your needs. From expert film production that brings stories to life on the big screen to meticulously planned and executed events that leave a lasting impact, we're your one-stop solution. Whether you're seeking top-notch production services, event management that exceeds expectations, or a host of other specialized offerings, our dedicated team is committed to turning your vision into reality. With creativity at our core and a comprehensive suite of services, we strive to elevate every project we undertake, ensuring unparalleled quality and satisfaction for our clients. Partner with us for a seamless and memorable experience across the spectrum of film production and beyond.
@@ -1005,7 +1026,7 @@ a{
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: rgba(0, 0, 0, 0.459);
+     
             opacity: 0;
             transition: opacity 0.3s;
         }
@@ -1092,6 +1113,178 @@ a{
         }
     }
 </style>
+<style>
+  
+    body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        background-color: white;
+    }
+    .heading h1 {
+font-size: 3rem;
+color: rgb(139, 139, 6);
+margin-top: 3rem;
+margin-bottom: 3rem;
+text-align: center;
+}
+    h6 {
+        text-align: center;
+        font-size: 3vw;
+        margin-bottom: 2.5rem;
+        margin-top: 2em;
+        font-weight: bold; /* Responsive font size */
+    }
+    .gojam {
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow-x: hidden;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .scrollable-container {
+        overflow-x: auto;
+    }
+
+    .image-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+margin: 20px;
+
+}
+
+.image-item {
+position: relative;
+overflow: hidden;
+border-radius: 8px;
+height: 200px;
+margin: 0 40px 40px 0; /* Add margin between images */
+box-sizing: border-box;
+
+}
+
+
+
+    .image-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s;
+    }
+
+    .image-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .image-item:hover .image-overlay {
+        opacity: 1;
+    }
+
+    .overlay-text {
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.5s forwards;
+    }
+
+    .image-item:hover .overlay-text {
+        animation: fadeIn 0.5s forwards 0.2s;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 1200px) {
+        .image-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .image-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .image-grid {
+            grid-template-columns: 1fr;
+        }
+        .scrollable-container {
+            overflow-x: auto;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .image-grid {
+            grid-template-columns: 1fr;
+        }
+        .scrollable-container {
+            overflow-x: auto;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="heading">
+    <span></span>
+    <h1>Our Clients</h1>
+</div>
+<div class="gojam">
+<div class="scrollable-container">
+    <div class="image-grid">
+        <!-- Repeat for other images -->
+        <div class="image-item">
+            <img src="sp7.png" alt="Image 1">
+            <div class="image-overlay">
+                <div class="overlay-text"></div>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="white.jpg" alt="Image 1">
+            <div class="image-overlay">
+                <div class="overlay-text"> </div>
+            </div>
+        </div>
+        <div class="image-item">
+            <img src="sp8.jpg" alt="Image 1">
+            <div class="image-overlay">
+                <div class="overlay-text"> </div>
+            </div>
+        </div>
+       
+        <!-- Repeat for other images -->
+    </div>
+</div>
+</div>
 
 
 
@@ -1121,6 +1314,113 @@ a{
     </div>
     
 </div>
+
+
+
+
+
+
+
+
+
+<!--contact us-->
+<style>
+  
+
+
+    .contact-box{
+        max-width: 850px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #fff;
+       
+    }
+    
+    .left{
+        background: url("co.gif") no-repeat center;
+        background-size: cover;
+        height: 100%;
+    }
+    
+    .right{
+        padding: 25px 40px;
+    }
+    
+   
+    
+    .field{
+        width: 100%;
+        border: 2px solid rgba(0, 0, 0, 0);
+        outline: none;
+        background-color: rgba(230, 230, 230, 0.6);
+        padding: 0.5rem 1rem;
+        font-size: 1.1rem;
+        margin-bottom: 22px;
+        transition: .3s;
+    }
+    
+    .field:hover{
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    textarea{
+        min-height: 150px;
+    }
+    
+    .btn{
+        width: 100%;
+        padding: 0.5rem 1rem;
+        background-color: rgba(0, 0, 0, 0.692);
+        color: #fff;
+        font-size: 1.1rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: .3s;
+    }
+    
+    .btn:hover{
+        background-color: rgba(87, 87, 13, 0.575);
+    }
+    
+    .field:focus{
+        border: 2px solid rgba(30,85,250,0.47);
+        background-color: #fff;
+    }
+    
+    @media screen and (max-width: 880px){
+        .contact-box{
+            grid-template-columns: 1fr;
+        }
+        .left{
+            height: 200px;
+        }
+    }
+    
+    
+    </style>
+         <div class="heading">
+            <span></span>
+            <h1>Contact Us</h1>
+        </div>
+        <div class="container">
+            <div class="contact-box">
+                <div class="left"></div>
+                <div class="right">
+                    <h2></h2>
+                    <input type="text" class="field" placeholder="Your Name">
+                    <input type="text" class="field" placeholder="Your Email">
+                    <input type="text" class="field" placeholder="Phone">
+                    <textarea placeholder="Message" class="field"></textarea>
+                    <button class="btn">Send</button>
+                </div>
+            </div>
+        </div>
+
 <style>
      @media screen and (max-width: 768px) {
         .shadow-box {
