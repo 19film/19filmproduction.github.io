@@ -17,6 +17,9 @@
                     <a href="index.html" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
+                    <a href="index.html" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
                     <a href="pita.html" class="nav-link">Portfolio</a>
                 </li>
                 <li class="nav-item">
@@ -177,9 +180,9 @@
         <div class="image-grid">
             <!-- Repeat for other images -->
             <div class="image-item">
-                <img src="w1.jpg" alt="Image 1">
+                <img src="io.jpg" alt="Image 1">
                 <div class="image-overlay">
-                    <div class="overlay-text">Father's Day celebration was held by HOPE-SPH to give recognition for devoted fathers</div>
+                    <div class="overlay-text">covid 19 lecture</div>
                 </div>
             </div>
             <div class="image-item">
@@ -189,36 +192,190 @@
                 </div>
             </div>
             <div class="image-item">
-                <img src="kg.jpg" alt="Image 1">
-                <div class="image-overlay">
-                    <div class="overlay-text">Text for Image 1</div>
-                </div>
-            </div>
-            <div class="image-item">
-                <img src="w4.jpg" alt="Image 1">
+                <img src="blog3.png" alt="Image 1">
                 <div class="image-overlay">
                     <div class="overlay-text">The Ethiopian Youth Union in collaboration with 19 Film Productions and Ephraim Moges Film Productions helped affected health facilities in Kombolcha City.
                         We would like to thank the Mayor of Kombolcha, Ato Wendeson Lesanework, who welcomed us</div>
                 </div>
             </div>
-            <div class="image-item">
-                <img src="kg.jpg" alt="Image 1">
-                <div class="image-overlay">
-                    <div class="overlay-text">Text for Image 1</div>
-                </div>
-            </div>
-            <div class="image-item">
-                <img src="kg.jpg" alt="Image 1">
-                <div class="image-overlay">
-                    <div class="overlay-text">Text for Image 1</div>
-                </div>
-            </div>
+           
             <!-- Repeat for other images -->
         </div>
     </div>
 </div>
   
+<style>
+  
+    body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        background-color: white;
+    }
+    .heading h1 {
+font-size: 3rem;
+color: rgb(139, 139, 6);
+margin-top: 3rem;
+margin-bottom: 3rem;
+text-align: center;
+}
+    h6 {
+        text-align: center;
+        font-size: 3vw;
+        margin-bottom: 2.5rem;
+        margin-top: 2em;
+        font-weight: bold; /* Responsive font size */
+    }
+    .gojam {
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow-x: hidden;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
 
+    .scrollable-container {
+        overflow-x: auto;
+    }
+
+    .image-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+margin: 20px;
+
+}
+
+.image-item {
+position: relative;
+overflow: hidden;
+border-radius: 8px;
+height: 200px;
+margin: 0 40px 40px 0; /* Add margin between images */
+box-sizing: border-box;
+
+}
+
+
+
+    .image-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s;
+    }
+
+    .image-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .image-item:hover .image-overlay {
+        opacity: 1;
+    }
+
+    .overlay-text {
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.5s forwards;
+    }
+
+    .image-item:hover .overlay-text {
+        animation: fadeIn 0.5s forwards 0.2s;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 1200px) {
+        .image-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .image-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .image-grid {
+            grid-template-columns: 1fr;
+        }
+        .scrollable-container {
+            overflow-x: auto;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .image-grid {
+            grid-template-columns: 1fr;
+        }
+        .scrollable-container {
+            overflow-x: auto;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="heading">
+    <span></span>
+    <h1>Our Clients</h1>
+</div>
+<div class="gojam">
+<div class="scrollable-container">
+    <div class="image-grid">
+        <!-- Repeat for other images -->
+        <div class="image-item">
+            <img src="sp7.png" alt="Image 1">
+            <div class="image-overlay">
+                <div class="overlay-text"></div>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="white.jpg" alt="Image 1">
+            <div class="image-overlay">
+                <div class="overlay-text"> </div>
+            </div>
+        </div>
+        <div class="image-item">
+            <img src="sp8.jpg" alt="Image 1">
+            <div class="image-overlay">
+                <div class="overlay-text"> </div>
+            </div>
+        </div>
+       
+        <!-- Repeat for other images -->
+    </div>
+</div>
+</div>
 
 
 
