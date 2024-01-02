@@ -42,6 +42,7 @@
             margin: 0;
             font-family: "Arial", sans-serif;
             background-color: white;
+  
         }
         .heading h1 {
     font-size: 3rem;
@@ -63,6 +64,7 @@
             overflow-x: hidden;
             margin-top: 2rem;
             margin-bottom: 2rem;
+         
         }
 
         .scrollable-container {
@@ -94,7 +96,7 @@
             transform: scale(1.1);
         }
 
-        .image-overlay {
+       .gojjam .image-overlay {
             position: absolute;
             top: 0;
             left: 0;
@@ -186,16 +188,15 @@
                 </div>
             </div>
             <div class="image-item">
-                <img src="w2.jpg" alt="Image 1">
+                <img src="blog3.png" alt="Image 1">
                 <div class="image-overlay">
-                    <div class="overlay-text">The documentary on health was premiered for the first time.</div>
+                    <div class="overlay-text"> Do you know about hydrocephalus and spina bifida in babies during pregnancy?</div>
                 </div>
             </div>
             <div class="image-item">
-                <img src="blog3.png" alt="Image 1">
+                <img src="comingsoon.jpg" alt="Image 1">
                 <div class="image-overlay">
-                    <div class="overlay-text">The Ethiopian Youth Union in collaboration with 19 Film Productions and Ephraim Moges Film Productions helped affected health facilities in Kombolcha City.
-                        We would like to thank the Mayor of Kombolcha, Ato Wendeson Lesanework, who welcomed us</div>
+                    <div class="overlay-text"></div>
                 </div>
             </div>
            
@@ -217,6 +218,7 @@ color: rgb(139, 139, 6);
 margin-top: 3rem;
 margin-bottom: 3rem;
 text-align: center;
+
 }
     h6 {
         text-align: center;
@@ -232,7 +234,13 @@ text-align: center;
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
-
+    .slte {
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow-x: hidden;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
     .scrollable-container {
         overflow-x: auto;
     }
@@ -348,7 +356,7 @@ box-sizing: border-box;
     <span></span>
     <h1>Our Clients</h1>
 </div>
-<div class="gojam">
+<div class="slte">
 <div class="scrollable-container">
     <div class="image-grid">
         <!-- Repeat for other images -->
@@ -360,7 +368,7 @@ box-sizing: border-box;
         </div>
         
         <div class="image-item">
-            <img src="white.jpg" alt="Image 1">
+            <img src="gh.png" alt="Image 1">
             <div class="image-overlay">
                 <div class="overlay-text"> </div>
             </div>
@@ -464,7 +472,7 @@ box-sizing: border-box;
                     element.classList.add("animate");
                 } else {
                     element.classList.remove("animate");
-                }
+                 }
             });
         }
 
