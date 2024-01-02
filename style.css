@@ -162,7 +162,7 @@ img {
     font-size: 1.8rem;
     font-weight: 600; 
     color: grey;
-    text-transform: uppercase;
+   
     margin: 0.2em 0 1.3em;
     
    /* Use em units for margin */
@@ -197,7 +197,7 @@ h6 {
 }
  .heading {
     text-align: center;
-    text-transform: uppercase;
+    
     align-items: center; /* Center items vertically */
 
  }
@@ -215,7 +215,7 @@ h6 {
  }
  .headin {
     text-align: center;
-    text-transform: uppercase;
+
     align-items: center; /* Center items vertically */
      display: flex;
  }
@@ -251,7 +251,7 @@ h6 {
  }
  .shop-container .box{
     flex:1 1 10rem;
-    background: var(--main-color);
+    background: #1f242d;
     padding: 20px;
     display: flex;
     text-align: center;
@@ -368,6 +368,8 @@ h6 {
             justify-content: space-around;
             margin-top: 60px;
             margin-bottom: 50px;
+           
+        
         }
         
         .shadow-box {
