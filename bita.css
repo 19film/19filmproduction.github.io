@@ -81,10 +81,10 @@ a{
 
 }
 .heading h1{
-    font-size: 50px;
-    color: #000;
-    margin-bottom: 25px;
-    position: relative;
+    font-size: 3rem;
+    color: rgb(139, 139, 6);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 .heading h1::after{
     content:"";
