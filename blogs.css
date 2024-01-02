@@ -125,7 +125,11 @@ h5 {
     font-size: 3vw;
     margin-bottom: 2rem;
     margin-top: 4em;
-    font-weight: bold; /* Responsive font size */
+    font-weight: bold;
+    font-size: 3rem;
+    color: rgb(139, 139, 6);
+    margin-top: 3rem;
+    margin-bottom: 3rem; /* Responsive font size */
 }
 .contact {
     display: flex;
